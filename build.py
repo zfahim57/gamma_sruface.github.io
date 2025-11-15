@@ -39,6 +39,7 @@ for project in data["files"]:
     <div class="card">
         <h2>{project['filename']}</h2>
         <p>{project['smiles']}</p>
+        <p>{project['hkls']}</p>
         <strong>Status: </strong>
     </div>
     """
