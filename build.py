@@ -25,6 +25,32 @@ body {{
     border-radius: 10px;
     margin-bottom: 1rem;
 }}
+.collapsible {{
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    margin-top: 5px;
+    border-radius: 6px;
+    font-size: 15px;
+}}
+
+.active, .collapsible:hover {{
+    background-color: #ccc;
+}}
+
+.content {{
+    padding: 10px 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}}
 </style>
 </head>
 
@@ -38,9 +64,25 @@ for project in data["files"]:
     html += f"""
     <div class="card">
         <h2>{project['filename']}</h2>
-        <p>{project['smiles']}</p>
-        <p>{project['hkls']}</p>
-        <strong>Status: </strong>
+        <p><strong>SMILES:</strong> {project['smiles']}</p>
+    """
+
+    # Add collapsible HKL sections
+    for hkl in project["hkls"]:
+        plane = hkl["plane"]
+        d = hkl["d_spacing"]
+        dist = hkl["distance"]
+
+        html += f"""
+        <button class="collapsible">Plane: ({plane[0]}, {plane[1]}, {plane[2]})</button>
+        <div class="content">
+            <p><strong>d-spacing:</strong> {d} Å</p>
+            <p><strong>distance:</strong> {dist}</p>
+        </div>
+        """
+
+    html += """
+        <strong>Status:</strong> Available
     </div>
     """
 
