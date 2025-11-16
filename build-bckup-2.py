@@ -71,45 +71,21 @@ body {{
 """
 
 for project in data["files"]:
-
-    # ---- compute status ----
-    img_count = 0
-    total_hkls = len(project["hkls"])
-
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # count images
-    for hkl in project["hkls"]:
-        image = hkl.get("image")
-        if image:
-            img_fs = os.path.join(base_dir, image.lstrip("/"))
-            if os.path.exists(img_fs):
-                img_count += 1
-
-    # determine status
-    if img_count == total_hkls:
-        status = "Good"
-    elif img_count > 0:
-        status = "Partial"
-    else:
-        status = "Bad"
-
-    # ---- now render HTML ----
     html += f"""
     <div class="card">
-        <button class="collapsible file-toggle">
-            {project['filename']}  —  <span style="color:#555;">({status})</span>
-        </button>
+        <button class="collapsible file-toggle">{project['filename']}</button>
         <div class="content">
             <p><strong>SMILES:</strong> {project['smiles']}</p>
     """
-
-    # Now loop through HKLs again to render them
-    for hkl in project["hkls"]:
+    #status = project["Status"] 
+    status,img_count = "Bad", 0
+    # Add collapsible HKL sections
+    base_dir = os.path.dirname(os.path.abspath(__file__))  # put this near the top, after imports
+    for i,hkl in enumerate(project["hkls"]):
         plane = hkl["plane"]
         d = hkl["d_spacing"]
         dist = hkl["distance"]
-        image = hkl.get("image")
+        image = hkl.get("image")  # e.g. "images/9,10-DCA/plane_1_-1_-1.jpg"
 
         html += f"""
             <button class="collapsible plane-toggle">
@@ -121,22 +97,30 @@ for project in data["files"]:
         """
 
         if image:
+            # turn web path into local filesystem path
             img_fs = os.path.join(base_dir, image.lstrip("/"))
             if os.path.exists(img_fs):
-                # relative path fix
-                web_path = image.lstrip("/")
+                img_count += 1
                 html += f"""
                 <p><strong>Image:</strong></p>
-                <img src="{web_path}"
+                <img src="{image}"
                     alt="Plane ({plane[0]}, {plane[1]}, {plane[2]})"
                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
                 """
+            else:
+                print(f"⚠ Image file not found, skipping: {img_fs}")
 
         html += """
             </div>
         """
-
-    html += """
+    if img_count == len(project["hkls"]):
+        status = "Good"
+    elif img_count < len(project["hkls"]) and img_count > 0:
+        status = "Partial"
+    else:
+        status = "Bad"
+    html += f"""
+            <p><strong>Status:</strong> {status}</p>
         </div>  <!-- end file content -->
     </div>      <!-- end card -->
     """

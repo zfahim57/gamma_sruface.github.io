@@ -41,530 +41,860 @@ body {
     border-radius: 4px;
     margin-bottom: 10px;
 }
+
+.file-toggle {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.plane-toggle {
+    margin-left: 10px;
+    font-size: 14px;
+}
 </style>
 </head>
 
 <body>
 <h1>Gamma Surface Calculations</h1>
-<p>A collection of surface calculations for various molecular crystals using different force field styles.</p>
-<p><strong>Author:</strong> Zarif Fahim</p>
+<h2>A collection of surface calculations for various molecular crystals using different force field styles.</h2>
 
     <div class="card">
-        <h2>3-4-dichloro-phenol.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=C(C=C1O)Cl)Cl</p>
+        <button class="collapsible file-toggle">
+            3-4-dichloro-phenol  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC(=C(C=C1O)Cl)Cl</p>
     
-        <button class="collapsible">Plane: (0, 4, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.53175 Å</p>
-            <p><strong>distance:</strong> [1.766, 1.15]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 4, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.53175 Å</p>
+                <p><strong>distance:</strong> [1.766, 1.15]</p>
         
-        <button class="collapsible">Plane: (0, 4, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.53175 Å</p>
-            <p><strong>distance:</strong> [1.766, 1.15]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/3-4-dichloro-phenol/plane_0_4_0.jpg"
+                    alt="Plane (0, 4, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (4, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.53175 Å</p>
-            <p><strong>distance:</strong> [1.766, 1.15]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (4, 0, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.53175 Å</p>
+                <p><strong>distance:</strong> [1.766, 1.15]</p>
         
-        <button class="collapsible">Plane: (4, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.53175 Å</p>
-            <p><strong>distance:</strong> [1.766, 1.15]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/3-4-dichloro-phenol/plane_4_0_0.jpg"
+                    alt="Plane (4, 0, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>2-nitrobenzaldehyde.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC=C(C(=C1)C=O)[N+](=O)[O-]</p>
-    
-        <button class="collapsible">Plane: (1, 0, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.310297965982819 Å</p>
-            <p><strong>distance:</strong> [0.62]</p>
-        </div>
-        
-        <button class="collapsible">Plane: (1, 0, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.292034295548425 Å</p>
-            <p><strong>distance:</strong> [0.411]</p>
-        </div>
-        
-        <button class="collapsible">Plane: (0, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.684971945672563 Å</p>
-            <p><strong>distance:</strong> [0.15, -0.334]</p>
-        </div>
-        
-        <strong>Status:</strong> Available
-    </div>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>4-chlorobenzonitrile.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=CC=C1C#N)Cl</p>
+        <button class="collapsible file-toggle">
+            2-nitrobenzaldehyde  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC=C(C(=C1)C=O)[N+](=O)[O-]</p>
     
-        <button class="collapsible">Plane: (0, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.212486146429456 Å</p>
-            <p><strong>distance:</strong> [1.727]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.310297965982819 Å</p>
+                <p><strong>distance:</strong> [0.62]</p>
         
-        <button class="collapsible">Plane: (1, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.318375637769248 Å</p>
-            <p><strong>distance:</strong> [1.595]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/2-nitrobenzaldehyde/plane_1_0_-1.jpg"
+                    alt="Plane (1, 0, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.9304912351776227 Å</p>
-            <p><strong>distance:</strong> [0.838]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.292034295548425 Å</p>
+                <p><strong>distance:</strong> [0.411]</p>
         
-        <button class="collapsible">Plane: (2, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.8725919173010834 Å</p>
-            <p><strong>distance:</strong> [0.145]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/2-nitrobenzaldehyde/plane_1_0_1.jpg"
+                    alt="Plane (1, 0, 1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>4CFNCS.cif</h2>
-        <p><strong>SMILES:</strong> FC(F)(F)c1ccc(cc1)/N=C=S</p>
-    
-        <button class="collapsible">Plane: (0, 2, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.357 Å</p>
-            <p><strong>distance:</strong> [1.215]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.684971945672563 Å</p>
+                <p><strong>distance:</strong> [0.15, -0.334]</p>
         
-        <button class="collapsible">Plane: (2, -1, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.993069435466331 Å</p>
-            <p><strong>distance:</strong> [0.053]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/2-nitrobenzaldehyde/plane_0_0_2.jpg"
+                    alt="Plane (0, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (2, 1, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.993069435466331 Å</p>
-            <p><strong>distance:</strong> [0.053]</p>
-        </div>
-        
-        <strong>Status:</strong> Available
-    </div>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>9,10-DCA.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC=C2C(=C1)C(=C3C=CC=CC3=C2C#N)C#N</p>
+        <button class="collapsible file-toggle">
+            4CFNCS  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> FC(F)(F)c1ccc(cc1)/N=C=S</p>
     
-        <button class="collapsible">Plane: (1, -1, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.3457516585992026 Å</p>
-            <p><strong>distance:</strong> [2.21]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 2, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.357 Å</p>
+                <p><strong>distance:</strong> [1.215]</p>
         
-        <button class="collapsible">Plane: (2, -2, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.7578639161793033 Å</p>
-            <p><strong>distance:</strong> [1.161]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/4CFNCS/plane_0_2_0.jpg"
+                    alt="Plane (0, 2, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, -1, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.5503465658369895 Å</p>
-            <p><strong>distance:</strong> [1.14]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (2, -1, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.993069435466331 Å</p>
+                <p><strong>distance:</strong> [0.053]</p>
         
-        <button class="collapsible">Plane: (0, 1, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 8.060380315324876 Å</p>
-            <p><strong>distance:</strong> [0.89]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/4CFNCS/plane_2_-1_0.jpg"
+                    alt="Plane (2, -1, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, 0, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.7819926868247213 Å</p>
-            <p><strong>distance:</strong> [0.71]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (2, 1, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.993069435466331 Å</p>
+                <p><strong>distance:</strong> [0.053]</p>
         
-        <button class="collapsible">Plane: (2, -3, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.5827506847863504 Å</p>
-            <p><strong>distance:</strong> [0.515]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/4CFNCS/plane_2_1_0.jpg"
+                    alt="Plane (2, 1, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, -2, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 2.8856441662742682 Å</p>
-            <p><strong>distance:</strong> [0.358]</p>
-        </div>
-        
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>AQAQOZ-DMP.cif</h2>
-        <p><strong>SMILES:</strong> CC1=NC(=CC=C1)/N=C/C2=C(C(=CC(=C2)Cl)Cl)O</p>
-    
-        <button class="collapsible">Plane: (2, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.135685268138216 Å</p>
-            <p><strong>distance:</strong> [1.578, 0.906]</p>
-        </div>
-        
-        <button class="collapsible">Plane: (2, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.135685268138216 Å</p>
-            <p><strong>distance:</strong> [1.578, 0.906]</p>
-        </div>
-        
-        <strong>Status:</strong> Available
-    </div>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>1,4-DBB.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=CC=C1Br)Br</p>
+        <button class="collapsible file-toggle">
+            9,10-DCA  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC=C2C(=C1)C(=C3C=CC=CC3=C2C#N)C#N</p>
     
-        <button class="collapsible">Plane: (0, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.138328399279442 Å</p>
-            <p><strong>distance:</strong> [2.314]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, -1, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.3457516585992026 Å</p>
+                <p><strong>distance:</strong> [2.21]</p>
         
-        <button class="collapsible">Plane: (1, 0, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.74474220245442 Å</p>
-            <p><strong>distance:</strong> [1.333]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_1_-1_-1.jpg"
+                    alt="Plane (1, -1, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, 0, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.9994139656648633 Å</p>
-            <p><strong>distance:</strong> [1.128]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (2, -2, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.7578639161793033 Å</p>
+                <p><strong>distance:</strong> [1.161]</p>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>4-(n-hexyloxy)benzoic-acid.cif</h2>
-        <p><strong>SMILES:</strong> CCCCCCOC1=CC=C(C=C1)C(=O)O</p>
-    
-        <button class="collapsible">Plane: (3, 0, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 4.622517860078711 Å</p>
-            <p><strong>distance:</strong> [0.661]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_2_-2_-1.jpg"
+                    alt="Plane (2, -2, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (2, 0, -2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.4032366090429464 Å</p>
-            <p><strong>distance:</strong> [0.259, -1.599]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, -1, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.5503465658369895 Å</p>
+                <p><strong>distance:</strong> [1.14]</p>
         
-        <button class="collapsible">Plane: (1, 0, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 11.465879472095333 Å</p>
-            <p><strong>distance:</strong> [0.065]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_1_-1_0.jpg"
+                    alt="Plane (1, -1, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>4-CBN.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=CC=C1C#N)Cl</p>
-    
-        <button class="collapsible">Plane: (0, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.218997631980483 Å</p>
-            <p><strong>distance:</strong> [1.81]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 8.060380315324876 Å</p>
+                <p><strong>distance:</strong> [0.89]</p>
         
-        <button class="collapsible">Plane: (1, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.325151247079163 Å</p>
-            <p><strong>distance:</strong> [1.643]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_0_1_0.jpg"
+                    alt="Plane (0, 1, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.9369985009016175 Å</p>
-            <p><strong>distance:</strong> [0.843]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.7819926868247213 Å</p>
+                <p><strong>distance:</strong> [0.71]</p>
         
-        <button class="collapsible">Plane: (2, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.8762562542368777 Å</p>
-            <p><strong>distance:</strong> [0.144]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_1_0_-1.jpg"
+                    alt="Plane (1, 0, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>6-chloro-2-4-dinitroaniline.cif</h2>
-        <p><strong>SMILES:</strong> C1=C(C=C(C(=C1[N+](=O)[O-])N)Cl)[N+](=O)[O-]</p>
-    
-        <button class="collapsible">Plane: (0, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.637264793841844 Å</p>
-            <p><strong>distance:</strong> [2.19, -0.238]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (2, -3, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.5827506847863504 Å</p>
+                <p><strong>distance:</strong> [0.515]</p>
         
-        <button class="collapsible">Plane: (1, 0, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.881643559878607 Å</p>
-            <p><strong>distance:</strong> [0.501]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_2_-3_-1.jpg"
+                    alt="Plane (2, -3, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (0, 1, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.5324657730286178 Å</p>
-            <p><strong>distance:</strong> [0.071]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, -2, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 2.8856441662742682 Å</p>
+                <p><strong>distance:</strong> [0.358]</p>
         
-        <button class="collapsible">Plane: (0, 1, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.5324657730286178 Å</p>
-            <p><strong>distance:</strong> [0.071]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/9,10-DCA/plane_1_-2_0.jpg"
+                    alt="Plane (1, -2, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>2-methylthio-nicotinic-aicd.cif</h2>
-        <p><strong>SMILES:</strong> CSC1=C(C=CC=N1)C(=O)O</p>
-    
-        <button class="collapsible">Plane: (0, 4, 0)</button>
+        <button class="collapsible file-toggle">
+            AQAQOZ-DMP  —  <span style="color:#555;">(Good)</span>
+        </button>
         <div class="content">
-            <p><strong>d-spacing:</strong> 6.34325 Å</p>
-            <p><strong>distance:</strong> [0.299, -0.66]</p>
-        </div>
-        
-        <strong>Status:</strong> Available
-    </div>
+            <p><strong>SMILES:</strong> CC1=NC(=CC=C1)/N=C/C2=C(C(=CC(=C2)Cl)Cl)O</p>
     
-    <div class="card">
-        <h2>1,3,5-TBB.cif</h2>
-        <p><strong>SMILES:</strong> C1=C(C=C(C=C1Br)Br)Br</p>
-    
-        <button class="collapsible">Plane: (0, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.115 Å</p>
-            <p><strong>distance:</strong> [1.451]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 7.135685268138216 Å</p>
+                <p><strong>distance:</strong> [1.578, 0.906]</p>
         
-        <strong>Status:</strong> Available
-    </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/AQAQOZ-DMP/plane_2_0_0.jpg"
+                    alt="Plane (2, 0, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>135-trifluoro-246-triiodobenzene.cif</h2>
-        <p><strong>SMILES:</strong> Fc1c(I)c(F)c(I)c(F)c1I</p>
+        <button class="collapsible file-toggle">
+            1,4-DBB  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC(=CC=C1Br)Br</p>
     
-        <button class="collapsible">Plane: (2, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.8967975851884225 Å</p>
-            <p><strong>distance:</strong> [1.873, 0.546]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 7.138328399279442 Å</p>
+                <p><strong>distance:</strong> [2.314]</p>
         
-        <button class="collapsible">Plane: (2, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.8967975851884225 Å</p>
-            <p><strong>distance:</strong> [1.873, 0.546]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/1,4-DBB/plane_0_0_2.jpg"
+                    alt="Plane (0, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, 0, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 8.66456477571714 Å</p>
-            <p><strong>distance:</strong> [1.071]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.74474220245442 Å</p>
+                <p><strong>distance:</strong> [1.333]</p>
         
-        <button class="collapsible">Plane: (2, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 6.643444352175884 Å</p>
-            <p><strong>distance:</strong> [0.664]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/1,4-DBB/plane_1_0_-1.jpg"
+                    alt="Plane (1, 0, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>345-trimethoxybenzaldehyde.cif</h2>
-        <p><strong>SMILES:</strong> COC1=CC(=CC(=C1OC)OC)C=O</p>
-    
-        <button class="collapsible">Plane: (4, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.50332119098992 Å</p>
-            <p><strong>distance:</strong> [0.696, 0.156, 0.102]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.9994139656648633 Å</p>
+                <p><strong>distance:</strong> [1.128]</p>
         
-        <button class="collapsible">Plane: (4, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.50332119098992 Å</p>
-            <p><strong>distance:</strong> [0.696, 0.156, 0.102]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/1,4-DBB/plane_1_0_1.jpg"
+                    alt="Plane (1, 0, 1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (4, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.50332119098992 Å</p>
-            <p><strong>distance:</strong> [0.696, 0.156, 0.102]</p>
-        </div>
-        
-        <strong>Status:</strong> Available
-    </div>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>4-NBA.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=CC=C1C(=O)O)[N+](=O)[O-]</p>
+        <button class="collapsible file-toggle">
+            4-(n-hexyloxy)benzoic-acid  —  <span style="color:#555;">(Bad)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> CCCCCCOC1=CC=C(C=C1)C(=O)O</p>
     
-        <button class="collapsible">Plane: (2, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.164829062170804 Å</p>
-            <p><strong>distance:</strong> [0.901]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (3, 0, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 4.622517860078711 Å</p>
+                <p><strong>distance:</strong> [0.661]</p>
         
-        <button class="collapsible">Plane: (2, 0, -2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.765971887282312 Å</p>
-            <p><strong>distance:</strong> [0.031]</p>
-        </div>
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>1,3-DNB.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-]</p>
-    
-        <button class="collapsible">Plane: (0, 1, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.5417908715978412 Å</p>
-            <p><strong>distance:</strong> [0.454]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, -2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.4032366090429464 Å</p>
+                <p><strong>distance:</strong> [0.259, -1.599]</p>
         
-        <button class="collapsible">Plane: (0, 1, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.5417908715978412 Å</p>
-            <p><strong>distance:</strong> [0.454]</p>
-        </div>
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
-    
-    <div class="card">
-        <h2>3hy.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=C(C(=C1)Cl)Cl)C(=O)NN</p>
-    
-        <button class="collapsible">Plane: (0, 0, 4)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 7.693430531788618 Å</p>
-            <p><strong>distance:</strong> [1.47, -1.212]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 11.465879472095333 Å</p>
+                <p><strong>distance:</strong> [0.065]</p>
         
-        <button class="collapsible">Plane: (2, 0, 2)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.9529240830098331 Å</p>
-            <p><strong>distance:</strong> [0.295, -0.965]</p>
-        </div>
+            </div>
         
-        <strong>Status:</strong> Available
-    </div>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>1,3,5-TCB.cif</h2>
-        <p><strong>SMILES:</strong> C1=C(C=C(C=C1Cl)Cl)Cl</p>
-    
-        <button class="collapsible">Plane: (0, 0, 2)</button>
+        <button class="collapsible file-toggle">
+            4-CBN  —  <span style="color:#555;">(Good)</span>
+        </button>
         <div class="content">
-            <p><strong>d-spacing:</strong> 6.965 Å</p>
-            <p><strong>distance:</strong> [1.254]</p>
-        </div>
+            <p><strong>SMILES:</strong> C1=CC(=CC=C1C#N)Cl</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.218997631980483 Å</p>
+                <p><strong>distance:</strong> [1.81]</p>
         
-        <strong>Status:</strong> Available
-    </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/4-CBN/plane_0_0_2.jpg"
+                    alt="Plane (0, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.325151247079163 Å</p>
+                <p><strong>distance:</strong> [1.643]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/4-CBN/plane_1_0_2.jpg"
+                    alt="Plane (1, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.9369985009016175 Å</p>
+                <p><strong>distance:</strong> [0.843]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/4-CBN/plane_1_0_0.jpg"
+                    alt="Plane (1, 0, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.8762562542368777 Å</p>
+                <p><strong>distance:</strong> [0.144]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/4-CBN/plane_2_0_2.jpg"
+                    alt="Plane (2, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
     <div class="card">
-        <h2>4-FBN.cif</h2>
-        <p><strong>SMILES:</strong> C1=CC(=CC=C1C#N)F</p>
+        <button class="collapsible file-toggle">
+            6-chloro-2-4-dinitroaniline  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=C(C=C(C(=C1[N+](=O)[O-])N)Cl)[N+](=O)[O-]</p>
     
-        <button class="collapsible">Plane: (1, 1, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.122388263862276 Å</p>
-            <p><strong>distance:</strong> [2.11]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.637264793841844 Å</p>
+                <p><strong>distance:</strong> [2.19, -0.238]</p>
         
-        <button class="collapsible">Plane: (1, 0, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.5304409341665983 Å</p>
-            <p><strong>distance:</strong> [1.789]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg"
+                    alt="Plane (0, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, 0, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 3.7586297050171953 Å</p>
-            <p><strong>distance:</strong> [1.127]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.881643559878607 Å</p>
+                <p><strong>distance:</strong> [0.501]</p>
         
-        <button class="collapsible">Plane: (0, 1, -1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.77791999563296 Å</p>
-            <p><strong>distance:</strong> [1.054]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg"
+                    alt="Plane (1, 0, 1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (0, 1, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 5.6869159642474765 Å</p>
-            <p><strong>distance:</strong> [1.053]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.5324657730286178 Å</p>
+                <p><strong>distance:</strong> [0.071]</p>
         
-        <button class="collapsible">Plane: (2, 1, 1)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.72606165928831 Å</p>
-            <p><strong>distance:</strong> [1.026]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg"
+                    alt="Plane (0, 1, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (2, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.9076459922259792 Å</p>
-            <p><strong>distance:</strong> [0.879, 0.832]</p>
-        </div>
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.5324657730286178 Å</p>
+                <p><strong>distance:</strong> [0.071]</p>
         
-        <button class="collapsible">Plane: (2, 0, 0)</button>
-        <div class="content">
-            <p><strong>d-spacing:</strong> 1.9076459922259792 Å</p>
-            <p><strong>distance:</strong> [0.879, 0.832]</p>
-        </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg"
+                    alt="Plane (0, 1, 1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
         
-        <button class="collapsible">Plane: (1, -1, 0)</button>
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            2-methylthio-nicotinic-aicd  —  <span style="color:#555;">(Good)</span>
+        </button>
         <div class="content">
-            <p><strong>d-spacing:</strong> 3.490458794906216 Å</p>
-            <p><strong>distance:</strong> [0.445]</p>
-        </div>
+            <p><strong>SMILES:</strong> CSC1=C(C=CC=N1)C(=O)O</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (0, 4, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.34325 Å</p>
+                <p><strong>distance:</strong> [0.299, -0.66]</p>
         
-        <button class="collapsible">Plane: (2, 1, -1)</button>
+                <p><strong>Image:</strong></p>
+                <img src="images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg"
+                    alt="Plane (0, 4, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            1,3,5-TBB  —  <span style="color:#555;">(Good)</span>
+        </button>
         <div class="content">
-            <p><strong>d-spacing:</strong> 1.7795054730212576 Å</p>
-            <p><strong>distance:</strong> [0.378]</p>
-        </div>
+            <p><strong>SMILES:</strong> C1=C(C=C(C=C1Br)Br)Br</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 7.115 Å</p>
+                <p><strong>distance:</strong> [1.451]</p>
         
-        <button class="collapsible">Plane: (0, 0, 2)</button>
+                <p><strong>Image:</strong></p>
+                <img src="images/1,3,5-TBB/plane_0_0_2.jpg"
+                    alt="Plane (0, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            135-trifluoro-246-triiodobenzene  —  <span style="color:#555;">(Good)</span>
+        </button>
         <div class="content">
-            <p><strong>d-spacing:</strong> 6.058977432915974 Å</p>
-            <p><strong>distance:</strong> [0.155, -1.168]</p>
-        </div>
+            <p><strong>SMILES:</strong> Fc1c(I)c(F)c(I)c(F)c1I</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.8967975851884225 Å</p>
+                <p><strong>distance:</strong> [1.873, 0.546]</p>
         
-        <strong>Status:</strong> Available
-    </div>
+                <p><strong>Image:</strong></p>
+                <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg"
+                    alt="Plane (2, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 8.66456477571714 Å</p>
+                <p><strong>distance:</strong> [1.071]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg"
+                    alt="Plane (1, 0, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.643444352175884 Å</p>
+                <p><strong>distance:</strong> [0.664]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg"
+                    alt="Plane (2, 0, 0)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            345-trimethoxybenzaldehyde  —  <span style="color:#555;">(Bad)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> COC1=CC(=CC(=C1OC)OC)C=O</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (4, 0, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 7.50332119098992 Å</p>
+                <p><strong>distance:</strong> [0.696, 0.156, 0.102]</p>
+        
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            4-NBA  —  <span style="color:#555;">(Bad)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC(=CC=C1C(=O)O)[N+](=O)[O-]</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.164829062170804 Å</p>
+                <p><strong>distance:</strong> [0.901]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, -2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.765971887282312 Å</p>
+                <p><strong>distance:</strong> [0.031]</p>
+        
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            1,3-DNB  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-]</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.5417908715978412 Å</p>
+                <p><strong>distance:</strong> [0.454]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/1,3-DNB/plane_0_1_-1.jpg"
+                    alt="Plane (0, 1, -1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.5417908715978412 Å</p>
+                <p><strong>distance:</strong> [0.454]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/1,3-DNB/plane_0_1_1.jpg"
+                    alt="Plane (0, 1, 1)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            3hy  —  <span style="color:#555;">(Partial)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC(=C(C(=C1)Cl)Cl)C(=O)NN</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 4)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 7.693430531788618 Å</p>
+                <p><strong>distance:</strong> [1.47, -1.212]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/3hy/plane_0_0_4.jpg"
+                    alt="Plane (0, 0, 4)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.9529240830098331 Å</p>
+                <p><strong>distance:</strong> [0.295, -0.965]</p>
+        
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            1,3,5-TCB  —  <span style="color:#555;">(Good)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=C(C=C(C=C1Cl)Cl)Cl</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.965 Å</p>
+                <p><strong>distance:</strong> [1.254]</p>
+        
+                <p><strong>Image:</strong></p>
+                <img src="images/1,3,5-TCB/plane_0_0_2.jpg"
+                    alt="Plane (0, 0, 2)"
+                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
+    <div class="card">
+        <button class="collapsible file-toggle">
+            4-FBN  —  <span style="color:#555;">(Bad)</span>
+        </button>
+        <div class="content">
+            <p><strong>SMILES:</strong> C1=CC(=CC=C1C#N)F</p>
+    
+            <button class="collapsible plane-toggle">
+                Plane: (1, 1, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.122388263862276 Å</p>
+                <p><strong>distance:</strong> [2.11]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.5304409341665983 Å</p>
+                <p><strong>distance:</strong> [1.789]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (1, 0, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.7586297050171953 Å</p>
+                <p><strong>distance:</strong> [1.127]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.77791999563296 Å</p>
+                <p><strong>distance:</strong> [1.054]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (0, 1, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 5.6869159642474765 Å</p>
+                <p><strong>distance:</strong> [1.053]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 1, 1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.72606165928831 Å</p>
+                <p><strong>distance:</strong> [1.026]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 0, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.9076459922259792 Å</p>
+                <p><strong>distance:</strong> [0.879, 0.832]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (1, -1, 0)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 3.490458794906216 Å</p>
+                <p><strong>distance:</strong> [0.445]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (2, 1, -1)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 1.7795054730212576 Å</p>
+                <p><strong>distance:</strong> [0.378]</p>
+        
+            </div>
+        
+            <button class="collapsible plane-toggle">
+                Plane: (0, 0, 2)
+            </button>
+            <div class="content">
+                <p><strong>d-spacing:</strong> 6.058977432915974 Å</p>
+                <p><strong>distance:</strong> [0.155, -1.168]</p>
+        
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
     
 <script>
 var coll = document.getElementsByClassName("collapsible");

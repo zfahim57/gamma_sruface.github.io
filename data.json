@@ -1,13 +1,7 @@
 {
-    "main": {
-        "name": "Gamma Surface Calculations",
-        "description": "A collection of surface calculations for various molecular crystals using different force field styles.",
-        "author": "Zarif Fahim"
-    },
-
     "files": [
         {
-            "filename": "3-4-dichloro-phenol.cif",
+            "filename": "3-4-dichloro-phenol",
             "path": "/Users/zfahim/new_gamma/Cifs/3-4-dichloro-phenol.cif",
             "smiles": "C1=CC(=C(C=C1O)Cl)Cl",
             "hkls": [
@@ -21,19 +15,8 @@
                     "distance": [
                         1.766,
                         1.15
-                    ]
-                },
-                {
-                    "plane": [
-                        0,
-                        4,
-                        0
                     ],
-                    "d_spacing": 6.53175,
-                    "distance": [
-                        1.766,
-                        1.15
-                    ]
+                    "image": "images/3-4-dichloro-phenol/plane_0_4_0.jpg"
                 },
                 {
                     "plane": [
@@ -45,28 +28,18 @@
                     "distance": [
                         1.766,
                         1.15
-                    ]
-                },
-                {
-                    "plane": [
-                        4,
-                        0,
-                        0
                     ],
-                    "d_spacing": 6.53175,
-                    "distance": [
-                        1.766,
-                        1.15
-                    ]
+                    "image": "images/3-4-dichloro-phenol/plane_4_0_0.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "2-nitrobenzaldehyde.cif",
+            "filename": "2-nitrobenzaldehyde",
             "path": "/Users/zfahim/new_gamma/Cifs/2-nitrobenzaldehyde.cif",
             "smiles": "C1=CC=C(C(=C1)C=O)[N+](=O)[O-]",
             "hkls": [
@@ -79,7 +52,8 @@
                     "d_spacing": 6.310297965982819,
                     "distance": [
                         0.62
-                    ]
+                    ],
+                    "image": "images/2-nitrobenzaldehyde/plane_1_0_-1.jpg"
                 },
                 {
                     "plane": [
@@ -90,7 +64,8 @@
                     "d_spacing": 6.292034295548425,
                     "distance": [
                         0.411
-                    ]
+                    ],
+                    "image": "images/2-nitrobenzaldehyde/plane_1_0_1.jpg"
                 },
                 {
                     "plane": [
@@ -102,71 +77,18 @@
                     "distance": [
                         0.15,
                         -0.334
-                    ]
+                    ],
+                    "image": "images/2-nitrobenzaldehyde/plane_0_0_2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
-        },
-        {
-            "filename": "4-chlorobenzonitrile.cif",
-            "path": "/Users/zfahim/new_gamma/Cifs/4-chlorobenzonitrile.cif",
-            "smiles": "C1=CC(=CC=C1C#N)Cl",
-            "hkls": [
-                {
-                    "plane": [
-                        0,
-                        0,
-                        2
-                    ],
-                    "d_spacing": 6.212486146429456,
-                    "distance": [
-                        1.727
-                    ]
-                },
-                {
-                    "plane": [
-                        1,
-                        0,
-                        2
-                    ],
-                    "d_spacing": 3.318375637769248,
-                    "distance": [
-                        1.595
-                    ]
-                },
-                {
-                    "plane": [
-                        1,
-                        0,
-                        0
-                    ],
-                    "d_spacing": 3.9304912351776227,
-                    "distance": [
-                        0.838
-                    ]
-                },
-                {
-                    "plane": [
-                        2,
-                        0,
-                        2
-                    ],
-                    "d_spacing": 1.8725919173010834,
-                    "distance": [
-                        0.145
-                    ]
-                }
             ],
-            "styles": [
-                "OpenFF",
-                "GaFF"
-            ]
+            "Status": "Good"
         },
         {
-            "filename": "4CFNCS.cif",
+            "filename": "4CFNCS",
             "path": "/Users/zfahim/new_gamma/Cifs/4CFNCS.cif",
             "smiles": "FC(F)(F)c1ccc(cc1)/N=C=S",
             "styles": [
@@ -183,7 +105,8 @@
                     "d_spacing": 3.357,
                     "distance": [
                         1.215
-                    ]
+                    ],
+                    "image": "images/4CFNCS/plane_0_2_0.jpg"
                 },
                 {
                     "plane": [
@@ -194,7 +117,8 @@
                     "d_spacing": 3.993069435466331,
                     "distance": [
                         0.053
-                    ]
+                    ],
+                    "image": "images/4CFNCS/plane_2_-1_0.jpg"
                 },
                 {
                     "plane": [
@@ -205,12 +129,14 @@
                     "d_spacing": 3.993069435466331,
                     "distance": [
                         0.053
-                    ]
+                    ],
+                    "image": "images/4CFNCS/plane_2_1_0.jpg"
                 }
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "9,10-DCA.cif",
+            "filename": "9,10-DCA",
             "path": "/Users/zfahim/new_gamma/Cifs/9,10-DCA.cif",
             "smiles": "C1=CC=C2C(=C1)C(=C3C=CC=CC3=C2C#N)C#N",
             "hkls": [
@@ -223,7 +149,8 @@
                     "d_spacing": 3.3457516585992026,
                     "distance": [
                         2.21
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_1_-1_-1.jpg"
                 },
                 {
                     "plane": [
@@ -234,7 +161,8 @@
                     "d_spacing": 1.7578639161793033,
                     "distance": [
                         1.161
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_2_-2_-1.jpg"
                 },
                 {
                     "plane": [
@@ -245,7 +173,8 @@
                     "d_spacing": 3.5503465658369895,
                     "distance": [
                         1.14
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_1_-1_0.jpg"
                 },
                 {
                     "plane": [
@@ -256,7 +185,8 @@
                     "d_spacing": 8.060380315324876,
                     "distance": [
                         0.89
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_0_1_0.jpg"
                 },
                 {
                     "plane": [
@@ -267,7 +197,8 @@
                     "d_spacing": 3.7819926868247213,
                     "distance": [
                         0.71
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_1_0_-1.jpg"
                 },
                 {
                     "plane": [
@@ -278,7 +209,8 @@
                     "d_spacing": 1.5827506847863504,
                     "distance": [
                         0.515
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_2_-3_-1.jpg"
                 },
                 {
                     "plane": [
@@ -289,16 +221,18 @@
                     "d_spacing": 2.8856441662742682,
                     "distance": [
                         0.358
-                    ]
+                    ],
+                    "image": "images/9,10-DCA/plane_1_-2_0.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "AQAQOZ-DMP.cif",
+            "filename": "AQAQOZ-DMP",
             "path": "/Users/zfahim/new_gamma/Cifs/AQAQOZ-DMP.cif",
             "smiles": "CC1=NC(=CC=C1)/N=C/C2=C(C(=CC(=C2)Cl)Cl)O",
             "hkls": [
@@ -312,28 +246,18 @@
                     "distance": [
                         1.578,
                         0.906
-                    ]
-                },
-                {
-                    "plane": [
-                        2,
-                        0,
-                        0
                     ],
-                    "d_spacing": 7.135685268138216,
-                    "distance": [
-                        1.578,
-                        0.906
-                    ]
+                    "image": "images/AQAQOZ-DMP/plane_2_0_0.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "1,4-DBB.cif",
+            "filename": "1,4-DBB",
             "path": "/Users/zfahim/new_gamma/Cifs/1,4-DBB.cif",
             "smiles": "C1=CC(=CC=C1Br)Br",
             "hkls": [
@@ -346,7 +270,8 @@
                     "d_spacing": 7.138328399279442,
                     "distance": [
                         2.314
-                    ]
+                    ],
+                    "image": "images/1,4-DBB/plane_0_0_2.jpg"
                 },
                 {
                     "plane": [
@@ -357,7 +282,8 @@
                     "d_spacing": 3.74474220245442,
                     "distance": [
                         1.333
-                    ]
+                    ],
+                    "image": "images/1,4-DBB/plane_1_0_-1.jpg"
                 },
                 {
                     "plane": [
@@ -368,16 +294,18 @@
                     "d_spacing": 3.9994139656648633,
                     "distance": [
                         1.128
-                    ]
+                    ],
+                    "image": "images/1,4-DBB/plane_1_0_1.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "4-(n-hexyloxy)benzoic-acid.cif",
+            "filename": "4-(n-hexyloxy)benzoic-acid",
             "path": "/Users/zfahim/new_gamma/Cifs/4-(n-hexyloxy)benzoic-acid.cif",
             "smiles": "CCCCCCOC1=CC=C(C=C1)C(=O)O",
             "hkls": [
@@ -390,7 +318,8 @@
                     "d_spacing": 4.622517860078711,
                     "distance": [
                         0.661
-                    ]
+                    ],
+                    "image": "images/4-(n-hexyloxy)benzoic-acid/plane_3_0_-1.jpg"
                 },
                 {
                     "plane": [
@@ -402,7 +331,8 @@
                     "distance": [
                         0.259,
                         -1.599
-                    ]
+                    ],
+                    "image": "images/4-(n-hexyloxy)benzoic-acid/plane_2_0_-2.jpg"
                 },
                 {
                     "plane": [
@@ -413,17 +343,18 @@
                     "d_spacing": 11.465879472095333,
                     "distance": [
                         0.065
-                    ]
+                    ],
+                    "image": "images/4-(n-hexyloxy)benzoic-acid/plane_1_0_1.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
-
         {
-            "filename": "4-CBN.cif",
+            "filename": "4-CBN",
             "path": "/Users/zfahim/new_gamma/Cifs/4-CBN.cif",
             "smiles": "C1=CC(=CC=C1C#N)Cl",
             "hkls": [
@@ -436,7 +367,8 @@
                     "d_spacing": 6.218997631980483,
                     "distance": [
                         1.81
-                    ]
+                    ],
+                    "image": "images/4-CBN/plane_0_0_2.jpg"
                 },
                 {
                     "plane": [
@@ -447,7 +379,8 @@
                     "d_spacing": 3.325151247079163,
                     "distance": [
                         1.643
-                    ]
+                    ],
+                    "image": "images/4-CBN/plane_1_0_2.jpg"
                 },
                 {
                     "plane": [
@@ -458,7 +391,8 @@
                     "d_spacing": 3.9369985009016175,
                     "distance": [
                         0.843
-                    ]
+                    ],
+                    "image": "images/4-CBN/plane_1_0_0.jpg"
                 },
                 {
                     "plane": [
@@ -469,16 +403,18 @@
                     "d_spacing": 1.8762562542368777,
                     "distance": [
                         0.144
-                    ]
+                    ],
+                    "image": "images/4-CBN/plane_2_0_2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "6-chloro-2-4-dinitroaniline.cif",
+            "filename": "6-chloro-2-4-dinitroaniline",
             "path": "/Users/zfahim/new_gamma/Cifs/6-chloro-2-4-dinitroaniline.cif",
             "smiles": "C1=C(C=C(C(=C1[N+](=O)[O-])N)Cl)[N+](=O)[O-]",
             "hkls": [
@@ -492,7 +428,8 @@
                     "distance": [
                         2.19,
                         -0.238
-                    ]
+                    ],
+                    "image": "images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg"
                 },
                 {
                     "plane": [
@@ -503,7 +440,8 @@
                     "d_spacing": 6.881643559878607,
                     "distance": [
                         0.501
-                    ]
+                    ],
+                    "image": "images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg"
                 },
                 {
                     "plane": [
@@ -514,7 +452,8 @@
                     "d_spacing": 3.5324657730286178,
                     "distance": [
                         0.071
-                    ]
+                    ],
+                    "image": "images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg"
                 },
                 {
                     "plane": [
@@ -525,16 +464,18 @@
                     "d_spacing": 3.5324657730286178,
                     "distance": [
                         0.071
-                    ]
+                    ],
+                    "image": "images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "2-methylthio-nicotinic-aicd.cif",
+            "filename": "2-methylthio-nicotinic-aicd",
             "path": "/Users/zfahim/new_gamma/Cifs/2-methylthio-nicotinic-aicd.cif",
             "smiles": "CSC1=C(C=CC=N1)C(=O)O",
             "hkls": [
@@ -548,16 +489,18 @@
                     "distance": [
                         0.299,
                         -0.66
-                    ]
+                    ],
+                    "image": "images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "1,3,5-TBB.cif",
+            "filename": "1,3,5-TBB",
             "path": "/Users/zfahim/new_gamma/Cifs/1,3,5-TBB.cif",
             "smiles": "C1=C(C=C(C=C1Br)Br)Br",
             "hkls": [
@@ -570,16 +513,18 @@
                     "d_spacing": 7.115,
                     "distance": [
                         1.451
-                    ]
+                    ],
+                    "image": "images/1,3,5-TBB/plane_0_0_2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "135-trifluoro-246-triiodobenzene.cif",
+            "filename": "135-trifluoro-246-triiodobenzene",
             "path": "/Users/zfahim/new_gamma/Cifs/135-trifluoro-246-triiodobenzene.cif",
             "smiles": "Fc1c(I)c(F)c(I)c(F)c1I",
             "styles": [
@@ -597,19 +542,8 @@
                     "distance": [
                         1.873,
                         0.546
-                    ]
-                },
-                {
-                    "plane": [
-                        2,
-                        0,
-                        2
                     ],
-                    "d_spacing": 5.8967975851884225,
-                    "distance": [
-                        1.873,
-                        0.546
-                    ]
+                    "image": "images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg"
                 },
                 {
                     "plane": [
@@ -620,7 +554,8 @@
                     "d_spacing": 8.66456477571714,
                     "distance": [
                         1.071
-                    ]
+                    ],
+                    "image": "images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg"
                 },
                 {
                     "plane": [
@@ -631,12 +566,14 @@
                     "d_spacing": 6.643444352175884,
                     "distance": [
                         0.664
-                    ]
+                    ],
+                    "image": "images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg"
                 }
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "345-trimethoxybenzaldehyde.cif",
+            "filename": "345-trimethoxybenzaldehyde",
             "path": "/Users/zfahim/new_gamma/Cifs/345-trimethoxybenzaldehyde.cif",
             "smiles": "COC1=CC(=CC(=C1OC)OC)C=O",
             "hkls": [
@@ -651,42 +588,18 @@
                         0.696,
                         0.156,
                         0.102
-                    ]
-                },
-                {
-                    "plane": [
-                        4,
-                        0,
-                        0
                     ],
-                    "d_spacing": 7.50332119098992,
-                    "distance": [
-                        0.696,
-                        0.156,
-                        0.102
-                    ]
-                },
-                {
-                    "plane": [
-                        4,
-                        0,
-                        0
-                    ],
-                    "d_spacing": 7.50332119098992,
-                    "distance": [
-                        0.696,
-                        0.156,
-                        0.102
-                    ]
+                    "image": "images/345-trimethoxybenzaldehyde/plane_4_0_0.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "4-NBA.cif",
+            "filename": "4-NBA",
             "path": "/Users/zfahim/new_gamma/Cifs/4-NBA.cif",
             "smiles": "C1=CC(=CC=C1C(=O)O)[N+](=O)[O-]",
             "hkls": [
@@ -699,7 +612,8 @@
                     "d_spacing": 5.164829062170804,
                     "distance": [
                         0.901
-                    ]
+                    ],
+                    "image": "images/4-NBA/plane_2_0_2.jpg"
                 },
                 {
                     "plane": [
@@ -710,16 +624,18 @@
                     "d_spacing": 5.765971887282312,
                     "distance": [
                         0.031
-                    ]
+                    ],
+                    "image": "images/4-NBA/plane_2_0_-2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "1,3-DNB.cif",
+            "filename": "1,3-DNB",
             "path": "/Users/zfahim/new_gamma/Cifs/1,3-DNB.cif",
             "smiles": "C1=CC(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-]",
             "hkls": [
@@ -732,7 +648,8 @@
                     "d_spacing": 3.5417908715978412,
                     "distance": [
                         0.454
-                    ]
+                    ],
+                    "image": "images/1,3-DNB/plane_0_1_-1.jpg"
                 },
                 {
                     "plane": [
@@ -743,16 +660,18 @@
                     "d_spacing": 3.5417908715978412,
                     "distance": [
                         0.454
-                    ]
+                    ],
+                    "image": "images/1,3-DNB/plane_0_1_1.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "3hy.cif",
+            "filename": "3hy",
             "path": "/Users/zfahim/new_gamma/Cifs/3hy.cif",
             "smiles": "C1=CC(=C(C(=C1)Cl)Cl)C(=O)NN",
             "hkls": [
@@ -766,7 +685,8 @@
                     "distance": [
                         1.47,
                         -1.212
-                    ]
+                    ],
+                    "image": "images/3hy/plane_0_0_4.jpg"
                 },
                 {
                     "plane": [
@@ -778,16 +698,18 @@
                     "distance": [
                         0.295,
                         -0.965
-                    ]
+                    ],
+                    "image": "images/3hy/plane_2_0_2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "1,3,5-TCB.cif",
+            "filename": "1,3,5-TCB",
             "path": "/Users/zfahim/new_gamma/Cifs/1,3,5-TCB.cif",
             "smiles": "C1=C(C=C(C=C1Cl)Cl)Cl",
             "hkls": [
@@ -800,16 +722,18 @@
                     "d_spacing": 6.965,
                     "distance": [
                         1.254
-                    ]
+                    ],
+                    "image": "images/1,3,5-TCB/plane_0_0_2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         },
         {
-            "filename": "4-FBN.cif",
+            "filename": "4-FBN",
             "path": "/Users/zfahim/new_gamma/Cifs/4-FBN.cif",
             "smiles": "C1=CC(=CC=C1C#N)F",
             "hkls": [
@@ -822,7 +746,8 @@
                     "d_spacing": 3.122388263862276,
                     "distance": [
                         2.11
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_1_1_0.jpg"
                 },
                 {
                     "plane": [
@@ -833,7 +758,8 @@
                     "d_spacing": 3.5304409341665983,
                     "distance": [
                         1.789
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_1_0_1.jpg"
                 },
                 {
                     "plane": [
@@ -844,7 +770,8 @@
                     "d_spacing": 3.7586297050171953,
                     "distance": [
                         1.127
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_1_0_-1.jpg"
                 },
                 {
                     "plane": [
@@ -855,7 +782,8 @@
                     "d_spacing": 5.77791999563296,
                     "distance": [
                         1.054
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_0_1_-1.jpg"
                 },
                 {
                     "plane": [
@@ -866,7 +794,8 @@
                     "d_spacing": 5.6869159642474765,
                     "distance": [
                         1.053
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_0_1_1.jpg"
                 },
                 {
                     "plane": [
@@ -877,7 +806,8 @@
                     "d_spacing": 1.72606165928831,
                     "distance": [
                         1.026
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_2_1_1.jpg"
                 },
                 {
                     "plane": [
@@ -889,19 +819,8 @@
                     "distance": [
                         0.879,
                         0.832
-                    ]
-                },
-                {
-                    "plane": [
-                        2,
-                        0,
-                        0
                     ],
-                    "d_spacing": 1.9076459922259792,
-                    "distance": [
-                        0.879,
-                        0.832
-                    ]
+                    "image": "images/4-FBN/plane_2_0_0.jpg"
                 },
                 {
                     "plane": [
@@ -912,7 +831,8 @@
                     "d_spacing": 3.490458794906216,
                     "distance": [
                         0.445
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_1_-1_0.jpg"
                 },
                 {
                     "plane": [
@@ -923,7 +843,8 @@
                     "d_spacing": 1.7795054730212576,
                     "distance": [
                         0.378
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_2_1_-1.jpg"
                 },
                 {
                     "plane": [
@@ -935,13 +856,15 @@
                     "distance": [
                         0.155,
                         -1.168
-                    ]
+                    ],
+                    "image": "images/4-FBN/plane_0_0_2.jpg"
                 }
             ],
             "styles": [
                 "OpenFF",
                 "GaFF"
-            ]
+            ],
+            "Status": "Good"
         }
     ]
 }

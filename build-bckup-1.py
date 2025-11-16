@@ -71,45 +71,18 @@ body {{
 """
 
 for project in data["files"]:
-
-    # ---- compute status ----
-    img_count = 0
-    total_hkls = len(project["hkls"])
-
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # count images
-    for hkl in project["hkls"]:
-        image = hkl.get("image")
-        if image:
-            img_fs = os.path.join(base_dir, image.lstrip("/"))
-            if os.path.exists(img_fs):
-                img_count += 1
-
-    # determine status
-    if img_count == total_hkls:
-        status = "Good"
-    elif img_count > 0:
-        status = "Partial"
-    else:
-        status = "Bad"
-
-    # ---- now render HTML ----
     html += f"""
     <div class="card">
-        <button class="collapsible file-toggle">
-            {project['filename']}  —  <span style="color:#555;">({status})</span>
-        </button>
+        <button class="collapsible file-toggle">{project['filename']}</button>
         <div class="content">
             <p><strong>SMILES:</strong> {project['smiles']}</p>
     """
-
-    # Now loop through HKLs again to render them
+    status = project["Status"] 
+    # Add collapsible HKL sections
     for hkl in project["hkls"]:
         plane = hkl["plane"]
         d = hkl["d_spacing"]
         dist = hkl["distance"]
-        image = hkl.get("image")
 
         html += f"""
             <button class="collapsible plane-toggle">
@@ -118,25 +91,11 @@ for project in data["files"]:
             <div class="content">
                 <p><strong>d-spacing:</strong> {d} Å</p>
                 <p><strong>distance:</strong> {dist}</p>
-        """
-
-        if image:
-            img_fs = os.path.join(base_dir, image.lstrip("/"))
-            if os.path.exists(img_fs):
-                # relative path fix
-                web_path = image.lstrip("/")
-                html += f"""
-                <p><strong>Image:</strong></p>
-                <img src="{web_path}"
-                    alt="Plane ({plane[0]}, {plane[1]}, {plane[2]})"
-                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                """
-
-        html += """
             </div>
         """
 
-    html += """
+    html += f"""
+            <p><strong>Status:</strong> {status}</p>
         </div>  <!-- end file content -->
     </div>      <!-- end card -->
     """
