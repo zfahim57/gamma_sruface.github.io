@@ -123,5 +123,9 @@ if __name__ == "__main__":
     #db.save()
 
     # Delete a file
-    db.delete_file("4-chlorobenzonitrile")
+    #db.delete_file("4-chlorobenzonitrile")
+    #db.save()
+    db.delete_file("4-(n-hexyloxy)benzoic-acid")
+    db.delete_file("4-NBA")
+    db.delete_file("4-FBN")
     db.save()

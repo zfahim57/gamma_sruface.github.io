@@ -305,6 +305,55 @@
             "Status": "Good"
         },
         {
+            "filename": "4-(n-hexyloxy)benzoic-acid",
+            "path": "/Users/zfahim/new_gamma/Cifs/4-(n-hexyloxy)benzoic-acid.cif",
+            "smiles": "CCCCCCOC1=CC=C(C=C1)C(=O)O",
+            "hkls": [
+                {
+                    "plane": [
+                        3,
+                        0,
+                        -1
+                    ],
+                    "d_spacing": 4.622517860078711,
+                    "distance": [
+                        0.661
+                    ],
+                    "image": "images/4-(n-hexyloxy)benzoic-acid/plane_3_0_-1.jpg"
+                },
+                {
+                    "plane": [
+                        2,
+                        0,
+                        -2
+                    ],
+                    "d_spacing": 5.4032366090429464,
+                    "distance": [
+                        0.259,
+                        -1.599
+                    ],
+                    "image": "images/4-(n-hexyloxy)benzoic-acid/plane_2_0_-2.jpg"
+                },
+                {
+                    "plane": [
+                        1,
+                        0,
+                        1
+                    ],
+                    "d_spacing": 11.465879472095333,
+                    "distance": [
+                        0.065
+                    ],
+                    "image": "images/4-(n-hexyloxy)benzoic-acid/plane_1_0_1.jpg"
+                }
+            ],
+            "styles": [
+                "OpenFF",
+                "GaFF"
+            ],
+            "Status": "Good"
+        },
+        {
             "filename": "4-CBN",
             "path": "/Users/zfahim/new_gamma/Cifs/4-CBN.cif",
             "smiles": "C1=CC(=CC=C1C#N)Cl",
@@ -550,6 +599,42 @@
             "Status": "Good"
         },
         {
+            "filename": "4-NBA",
+            "path": "/Users/zfahim/new_gamma/Cifs/4-NBA.cif",
+            "smiles": "C1=CC(=CC=C1C(=O)O)[N+](=O)[O-]",
+            "hkls": [
+                {
+                    "plane": [
+                        2,
+                        0,
+                        2
+                    ],
+                    "d_spacing": 5.164829062170804,
+                    "distance": [
+                        0.901
+                    ],
+                    "image": "images/4-NBA/plane_2_0_2.jpg"
+                },
+                {
+                    "plane": [
+                        2,
+                        0,
+                        -2
+                    ],
+                    "d_spacing": 5.765971887282312,
+                    "distance": [
+                        0.031
+                    ],
+                    "image": "images/4-NBA/plane_2_0_-2.jpg"
+                }
+            ],
+            "styles": [
+                "OpenFF",
+                "GaFF"
+            ],
+            "Status": "Good"
+        },
+        {
             "filename": "1,3-DNB",
             "path": "/Users/zfahim/new_gamma/Cifs/1,3-DNB.cif",
             "smiles": "C1=CC(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-]",
@@ -639,6 +724,140 @@
                         1.254
                     ],
                     "image": "images/1,3,5-TCB/plane_0_0_2.jpg"
+                }
+            ],
+            "styles": [
+                "OpenFF",
+                "GaFF"
+            ],
+            "Status": "Good"
+        },
+        {
+            "filename": "4-FBN",
+            "path": "/Users/zfahim/new_gamma/Cifs/4-FBN.cif",
+            "smiles": "C1=CC(=CC=C1C#N)F",
+            "hkls": [
+                {
+                    "plane": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "d_spacing": 3.122388263862276,
+                    "distance": [
+                        2.11
+                    ],
+                    "image": "images/4-FBN/plane_1_1_0.jpg"
+                },
+                {
+                    "plane": [
+                        1,
+                        0,
+                        1
+                    ],
+                    "d_spacing": 3.5304409341665983,
+                    "distance": [
+                        1.789
+                    ],
+                    "image": "images/4-FBN/plane_1_0_1.jpg"
+                },
+                {
+                    "plane": [
+                        1,
+                        0,
+                        -1
+                    ],
+                    "d_spacing": 3.7586297050171953,
+                    "distance": [
+                        1.127
+                    ],
+                    "image": "images/4-FBN/plane_1_0_-1.jpg"
+                },
+                {
+                    "plane": [
+                        0,
+                        1,
+                        -1
+                    ],
+                    "d_spacing": 5.77791999563296,
+                    "distance": [
+                        1.054
+                    ],
+                    "image": "images/4-FBN/plane_0_1_-1.jpg"
+                },
+                {
+                    "plane": [
+                        0,
+                        1,
+                        1
+                    ],
+                    "d_spacing": 5.6869159642474765,
+                    "distance": [
+                        1.053
+                    ],
+                    "image": "images/4-FBN/plane_0_1_1.jpg"
+                },
+                {
+                    "plane": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "d_spacing": 1.72606165928831,
+                    "distance": [
+                        1.026
+                    ],
+                    "image": "images/4-FBN/plane_2_1_1.jpg"
+                },
+                {
+                    "plane": [
+                        2,
+                        0,
+                        0
+                    ],
+                    "d_spacing": 1.9076459922259792,
+                    "distance": [
+                        0.879,
+                        0.832
+                    ],
+                    "image": "images/4-FBN/plane_2_0_0.jpg"
+                },
+                {
+                    "plane": [
+                        1,
+                        -1,
+                        0
+                    ],
+                    "d_spacing": 3.490458794906216,
+                    "distance": [
+                        0.445
+                    ],
+                    "image": "images/4-FBN/plane_1_-1_0.jpg"
+                },
+                {
+                    "plane": [
+                        2,
+                        1,
+                        -1
+                    ],
+                    "d_spacing": 1.7795054730212576,
+                    "distance": [
+                        0.378
+                    ],
+                    "image": "images/4-FBN/plane_2_1_-1.jpg"
+                },
+                {
+                    "plane": [
+                        0,
+                        0,
+                        2
+                    ],
+                    "d_spacing": 6.058977432915974,
+                    "distance": [
+                        0.155,
+                        -1.168
+                    ],
+                    "image": "images/4-FBN/plane_0_0_2.jpg"
                 }
             ],
             "styles": [
