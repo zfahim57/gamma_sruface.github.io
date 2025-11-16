@@ -88,7 +88,7 @@ for project in data["files"]:
 
     # determine status
     if img_count == total_hkls:
-        status = "Good"
+        status = "All Available"
     elif img_count > 0:
         status = "Partial"
     else:
