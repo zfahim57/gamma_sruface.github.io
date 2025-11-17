@@ -1,0 +1,92 @@
+
+#######################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC
+#
+#######################################################################
+#
+# If this CIF has been generated from an entry in the Cambridge
+# Structural Database, then it will include bibliographic, chemical,
+# crystal, experimental, refinement or atomic coordinate data resulting
+# from the CCDC's data processing and validation procedures.
+#
+#######################################################################
+
+data_CSD_CIF_CLBZNT05
+_audit_creation_date 1990-06-28
+_audit_creation_method CSD-ConQuest-V1
+_database_code_CSD CLBZNT05
+_database_code_depnum_ccdc_archive 'CCDC 1127056'
+_chemical_formula_sum 'C7 H4 Cl1 N1'
+_chemical_formula_moiety
+;
+C7 H4 Cl1 N1
+;
+_journal_coden_Cambridge 4
+_journal_volume 111
+_journal_year 1989
+_journal_page_first 6757
+_journal_name_full 'J.Am.Chem.Soc. '
+loop_
+_publ_author_name
+"G.R.Desiraju"
+"R.L.Harlow"
+_chemical_name_systematic
+;
+4-Chlorobenzonitrile
+;
+_cell_volume    317.021
+_exptl_crystal_colour 'colorless'
+_exptl_crystal_density_diffrn 1.441
+_exptl_special_details
+;
+Pc polymorph II
+
+;
+_diffrn_ambient_temperature 173.15
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt 0.034
+_refine_ls_wR_factor_gt 0.034
+_symmetry_cell_setting monoclinic
+_symmetry_space_group_name_H-M 'P c'
+_symmetry_Int_Tables_number 7
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 x,-y,1/2+z
+_cell_length_a 3.937(1)
+_cell_length_b 6.474(1)
+_cell_length_c 12.438(3)
+_cell_angle_alpha 90
+_cell_angle_beta 90.05(2)
+_cell_angle_gamma 90
+_cell_formula_units_Z 2
+loop_
+_atom_type_symbol
+_atom_type_radius_bond
+C 0.68
+H 0.23
+Cl 0.99
+N 0.68
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Cl1 Cl 0.50000 -0.1897(2) 0.00000
+N1 N -0.286(1) 0.5660(6) 0.3255(3)
+C1 C 0.3068(9) -0.0031(6) 0.0797(3)
+C2 C 0.2409(10) 0.1896(7) 0.0373(3)
+C3 C 0.0829(10) 0.3364(6) 0.1012(3)
+C4 C -0.0068(10) 0.2877(6) 0.2068(3)
+C5 C 0.0624(11) 0.0915(7) 0.2479(4)
+C6 C 0.2185(11) -0.0535(7) 0.1842(4)
+C7 C -0.1660(11) 0.4422(6) 0.2737(4)
+H1 H 0.326(9) 0.230(6) -0.029(3)
+H2 H 0.052(12) 0.475(7) 0.075(4)
+H3 H -0.013(14) 0.064(8) 0.310(5)
+H4 H 0.294(11) -0.182(7) 0.207(4)
+#END

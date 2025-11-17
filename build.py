@@ -7,13 +7,17 @@ with open("data.json") as f:
 
 print("JSON keys:", data.keys())
 
-# Build HTML
 html = f"""
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Gamma Surface Calculations</title>
+
+<!-- JSmol scripts -->
+<script type="text/javascript" src="jsmol/JSmol.min.js"></script>
+<script type="text/javascript" src="jsmol/JSmolApplet.js"></script>
+
 <style>
 body {{
     font-family: Arial, sans-serif;
@@ -37,11 +41,9 @@ body {{
     border-radius: 6px;
     font-size: 15px;
 }}
-
 .active, .collapsible:hover {{
     background-color: #ccc;
 }}
-
 .content {{
     padding: 10px 15px;
     display: none;
@@ -51,18 +53,40 @@ body {{
     border-radius: 4px;
     margin-bottom: 10px;
 }}
-
 .file-toggle {{
     font-weight: bold;
     font-size: 16px;
     margin-top: 10px;
 }}
-
 .plane-toggle {{
     margin-left: 10px;
     font-size: 14px;
 }}
+.cif-viewer-container {{
+    margin-top: 10px;
+}}
+.cif-viewer {{
+    width: 100%;
+    height: 400px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    display: none;
+}}
+.view-cif-btn {{
+    margin-top: 10px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    cursor: pointer;
+}}
+.view-cif-btn:hover {{
+    background-color: #ddd;
+}}
 </style>
+
 </head>
 
 <body>
@@ -70,15 +94,14 @@ body {{
 <h2>A collection of surface calculations for various molecular crystals using different force field styles.</h2>
 """
 
-for project in data["files"]:
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+for idx, project in enumerate(data["files"]):
 
     # ---- compute status ----
     img_count = 0
     total_hkls = len(project["hkls"])
 
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # count images
     for hkl in project["hkls"]:
         image = hkl.get("image")
         if image:
@@ -86,7 +109,6 @@ for project in data["files"]:
             if os.path.exists(img_fs):
                 img_count += 1
 
-    # determine status
     if img_count == total_hkls:
         status = "All Available"
     elif img_count > 0:
@@ -94,17 +116,34 @@ for project in data["files"]:
     else:
         status = "Bad"
 
-    # ---- now render HTML ----
+    # ---- CIF path ----
+    cif_name = project["filename"]
+    if not cif_name.lower().endswith(".cif"):
+        cif_name = cif_name + ".cif"
+    cif_web_path = f"cif/{cif_name}"
+
+    viewer_id = f"cif-viewer-{idx}"
+
     html += f"""
     <div class="card">
         <button class="collapsible file-toggle">
-            {project['filename']}  —  <span style="color:#555;">({status})</span>
+            {project['filename']} — <span style="color:#555;">({status})</span>
         </button>
+
         <div class="content">
             <p><strong>SMILES:</strong> {project['smiles']}</p>
+
+            <div class="cif-viewer-container">
+                <button class="view-cif-btn"
+                        data-cif="{cif_web_path}"
+                        data-target="{viewer_id}">
+                    View CIF structure
+                </button>
+                <div id="{viewer_id}" class="cif-viewer"></div>
+            </div>
     """
 
-    # Now loop through HKLs again to render them
+    # --- HKL sections ---
     for hkl in project["hkls"]:
         plane = hkl["plane"]
         d = hkl["d_spacing"]
@@ -115,6 +154,7 @@ for project in data["files"]:
             <button class="collapsible plane-toggle">
                 Plane: ({plane[0]}, {plane[1]}, {plane[2]})
             </button>
+
             <div class="content">
                 <p><strong>d-spacing:</strong> {d} Å</p>
                 <p><strong>distance:</strong> {dist}</p>
@@ -123,44 +163,85 @@ for project in data["files"]:
         if image:
             img_fs = os.path.join(base_dir, image.lstrip("/"))
             if os.path.exists(img_fs):
-                # relative path fix
                 web_path = image.lstrip("/")
                 html += f"""
                 <p><strong>Image:</strong></p>
                 <img src="{web_path}"
-                    alt="Plane ({plane[0]}, {plane[1]}, {plane[2]})"
-                    style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     alt="Plane"
+                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
                 """
 
-        html += """
-            </div>
-        """
+        html += "</div>"
 
-    html += """
-        </div>  <!-- end file content -->
-    </div>      <!-- end card -->
-    """
+    html += "</div></div>"  # end card
 
+# ---- Add JS ----
 html += """
 <script>
+// Collapsible logic
 var coll = document.getElementsByClassName("collapsible");
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
+        content.style.display = (content.style.display === "block") ? "none" : "block";
     });
 }
+
+var jsmolApplets = {};
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".view-cif-btn");
+
+    buttons.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+
+            var cifUrl = this.getAttribute("data-cif");
+            var targetId = this.getAttribute("data-target");
+            var viewerDiv = document.getElementById(targetId);
+
+            if (viewerDiv.dataset.open === "true") {
+                viewerDiv.style.display = "none";
+                viewerDiv.dataset.open = "false";
+                this.textContent = "View CIF structure";
+                return;
+            }
+
+            viewerDiv.style.display = "block";
+            viewerDiv.dataset.open = "true";
+            this.textContent = "Hide CIF structure";
+
+            if (!viewerDiv.dataset.initialized) {
+                viewerDiv.dataset.initialized = "true";
+
+                var Info = {
+                    width: "100%",
+                    height: "100%",
+                    use: "HTML5",
+                    j2sPath: "jsmol/j2s",
+                    script: `
+                        load ${cifUrl};
+                        set forcePacked on;
+                        set unitcell on;
+                        select *;
+                        wireframe 0.15;
+                        spacefill 25%;
+                        zoom 110;
+                    `,
+                    disableInitialConsole: true
+                };
+
+                jsmolApplets[targetId] = Jmol.getApplet(targetId + "_applet", Info);
+                viewerDiv.innerHTML = Jmol.getAppletHtml(jsmolApplets[targetId]);
+            }
+        });
+    });
+});
 </script>
 </body>
 </html>
 """
 
-# Write output HTML
 with open("index.html", "w") as f:
     f.write(html)
 
