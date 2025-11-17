@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <title>Gamma Surface Calculations</title>
 
-<!-- JSmol scripts -->
-<script type="text/javascript" src="jsmol/JSmol.min.js"></script>
-<script type="text/javascript" src="jsmol/JSmolApplet.js"></script>
+<!-- 3Dmol.js: no install needed -->
+<script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+<script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>
 
 <style>
 body {
@@ -56,25 +56,17 @@ body {
 .cif-viewer-container {
     margin-top: 10px;
 }
+
+/* 3Dmol viewer must have fixed size and position:relative */
 .cif-viewer {
     width: 100%;
     height: 400px;
+    min-height: 400px;
     border-radius: 6px;
     border: 1px solid #ddd;
     margin-top: 5px;
-    display: none;
-}
-.view-cif-btn {
-    margin-top: 10px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-    background-color: #eee;
-    cursor: pointer;
-}
-.view-cif-btn:hover {
-    background-color: #ddd;
+    background-color: #ffffff;
+    position: relative;
 }
 </style>
 
@@ -93,13 +85,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC(=C(C=C1O)Cl)Cl</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/3-4-dichloro-phenol.cif"
-                        data-target="cif-viewer-0">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-0" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-0"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/3-4-dichloro-phenol.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 4, 0)
@@ -113,7 +108,9 @@ body {
                 <img src="images/3-4-dichloro-phenol/plane_0_4_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (4, 0, 0)
             </button>
@@ -126,7 +123,12 @@ body {
                 <img src="images/3-4-dichloro-phenol/plane_4_0_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             2-nitrobenzaldehyde — <span style="color:#555;">(All Available)</span>
@@ -136,13 +138,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC=C(C(=C1)C=O)[N+](=O)[O-]</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/2-nitrobenzaldehyde.cif"
-                        data-target="cif-viewer-1">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-1" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-1"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/2-nitrobenzaldehyde.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, -1)
@@ -156,7 +161,9 @@ body {
                 <img src="images/2-nitrobenzaldehyde/plane_1_0_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, 1)
             </button>
@@ -169,7 +176,9 @@ body {
                 <img src="images/2-nitrobenzaldehyde/plane_1_0_1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -182,7 +191,12 @@ body {
                 <img src="images/2-nitrobenzaldehyde/plane_0_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             4CFNCS — <span style="color:#555;">(All Available)</span>
@@ -192,13 +206,16 @@ body {
             <p><strong>SMILES:</strong> FC(F)(F)c1ccc(cc1)/N=C=S</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/4CFNCS.cif"
-                        data-target="cif-viewer-2">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-2" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-2"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/4CFNCS.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 2, 0)
@@ -212,7 +229,9 @@ body {
                 <img src="images/4CFNCS/plane_0_2_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, -1, 0)
             </button>
@@ -225,7 +244,9 @@ body {
                 <img src="images/4CFNCS/plane_2_-1_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, 1, 0)
             </button>
@@ -238,7 +259,12 @@ body {
                 <img src="images/4CFNCS/plane_2_1_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             9,10-DCA — <span style="color:#555;">(All Available)</span>
@@ -248,13 +274,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC=C2C(=C1)C(=C3C=CC=CC3=C2C#N)C#N</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/9,10-DCA.cif"
-                        data-target="cif-viewer-3">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-3" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-3"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/9,10-DCA.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (1, -1, -1)
@@ -268,7 +297,9 @@ body {
                 <img src="images/9,10-DCA/plane_1_-1_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, -2, -1)
             </button>
@@ -281,7 +312,9 @@ body {
                 <img src="images/9,10-DCA/plane_2_-2_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, -1, 0)
             </button>
@@ -294,7 +327,9 @@ body {
                 <img src="images/9,10-DCA/plane_1_-1_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, 0)
             </button>
@@ -307,7 +342,9 @@ body {
                 <img src="images/9,10-DCA/plane_0_1_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, -1)
             </button>
@@ -320,7 +357,9 @@ body {
                 <img src="images/9,10-DCA/plane_1_0_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, -3, -1)
             </button>
@@ -333,7 +372,9 @@ body {
                 <img src="images/9,10-DCA/plane_2_-3_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, -2, 0)
             </button>
@@ -346,7 +387,12 @@ body {
                 <img src="images/9,10-DCA/plane_1_-2_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             AQAQOZ-DMP — <span style="color:#555;">(All Available)</span>
@@ -356,13 +402,12 @@ body {
             <p><strong>SMILES:</strong> CC1=NC(=CC=C1)/N=C/C2=C(C(=CC(=C2)Cl)Cl)O</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/AQAQOZ-DMP.cif"
-                        data-target="cif-viewer-4">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-4" class="cif-viewer"></div>
-            </div>
+    
+                <p style="color:#a00; font-style:italic;">
+                    CIF file not found: cif/AQAQOZ-DMP.cif
+                </p>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 0)
@@ -376,7 +421,12 @@ body {
                 <img src="images/AQAQOZ-DMP/plane_2_0_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             1,4-DBB — <span style="color:#555;">(All Available)</span>
@@ -386,13 +436,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC(=CC=C1Br)Br</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/1,4-DBB.cif"
-                        data-target="cif-viewer-5">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-5" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-5"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/1,4-DBB.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
@@ -406,7 +459,9 @@ body {
                 <img src="images/1,4-DBB/plane_0_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, -1)
             </button>
@@ -419,7 +474,9 @@ body {
                 <img src="images/1,4-DBB/plane_1_0_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, 1)
             </button>
@@ -432,7 +489,12 @@ body {
                 <img src="images/1,4-DBB/plane_1_0_1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             4-CBN — <span style="color:#555;">(All Available)</span>
@@ -442,13 +504,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC(=CC=C1C#N)Cl</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/4-CBN.cif"
-                        data-target="cif-viewer-6">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-6" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-6"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/4-CBN.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
@@ -462,7 +527,9 @@ body {
                 <img src="images/4-CBN/plane_0_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, 2)
             </button>
@@ -475,7 +542,9 @@ body {
                 <img src="images/4-CBN/plane_1_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, 0)
             </button>
@@ -488,7 +557,9 @@ body {
                 <img src="images/4-CBN/plane_1_0_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 2)
             </button>
@@ -501,7 +572,12 @@ body {
                 <img src="images/4-CBN/plane_2_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             6-chloro-2-4-dinitroaniline — <span style="color:#555;">(All Available)</span>
@@ -511,13 +587,16 @@ body {
             <p><strong>SMILES:</strong> C1=C(C=C(C(=C1[N+](=O)[O-])N)Cl)[N+](=O)[O-]</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/6-chloro-2-4-dinitroaniline.cif"
-                        data-target="cif-viewer-7">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-7" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-7"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/6-chloro-2-4-dinitroaniline.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
@@ -531,7 +610,9 @@ body {
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, 1)
             </button>
@@ -544,7 +625,9 @@ body {
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, -1)
             </button>
@@ -557,7 +640,9 @@ body {
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, 1)
             </button>
@@ -570,7 +655,12 @@ body {
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             2-methylthio-nicotinic-aicd — <span style="color:#555;">(All Available)</span>
@@ -580,13 +670,16 @@ body {
             <p><strong>SMILES:</strong> CSC1=C(C=CC=N1)C(=O)O</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/2-methylthio-nicotinic-aicd.cif"
-                        data-target="cif-viewer-8">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-8" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-8"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/2-methylthio-nicotinic-aicd.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 4, 0)
@@ -600,7 +693,12 @@ body {
                 <img src="images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             1,3,5-TBB — <span style="color:#555;">(All Available)</span>
@@ -610,13 +708,16 @@ body {
             <p><strong>SMILES:</strong> C1=C(C=C(C=C1Br)Br)Br</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/1,3,5-TBB.cif"
-                        data-target="cif-viewer-9">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-9" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-9"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/1,3,5-TBB.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
@@ -630,7 +731,12 @@ body {
                 <img src="images/1,3,5-TBB/plane_0_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             135-trifluoro-246-triiodobenzene — <span style="color:#555;">(All Available)</span>
@@ -640,13 +746,16 @@ body {
             <p><strong>SMILES:</strong> Fc1c(I)c(F)c(I)c(F)c1I</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/135-trifluoro-246-triiodobenzene.cif"
-                        data-target="cif-viewer-10">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-10" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-10"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/135-trifluoro-246-triiodobenzene.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 2)
@@ -660,7 +769,9 @@ body {
                 <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, -1)
             </button>
@@ -673,7 +784,9 @@ body {
                 <img src="images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 0)
             </button>
@@ -686,7 +799,12 @@ body {
                 <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             345-trimethoxybenzaldehyde — <span style="color:#555;">(All Available)</span>
@@ -696,13 +814,16 @@ body {
             <p><strong>SMILES:</strong> COC1=CC(=CC(=C1OC)OC)C=O</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/345-trimethoxybenzaldehyde.cif"
-                        data-target="cif-viewer-11">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-11" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-11"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/345-trimethoxybenzaldehyde.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (4, 0, 0)
@@ -716,7 +837,12 @@ body {
                 <img src="images/345-trimethoxybenzaldehyde/plane_4_0_0.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             1,3-DNB — <span style="color:#555;">(All Available)</span>
@@ -726,13 +852,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-]</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/1,3-DNB.cif"
-                        data-target="cif-viewer-12">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-12" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-12"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/1,3-DNB.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, -1)
@@ -746,7 +875,9 @@ body {
                 <img src="images/1,3-DNB/plane_0_1_-1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, 1)
             </button>
@@ -759,7 +890,12 @@ body {
                 <img src="images/1,3-DNB/plane_0_1_1.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             3hy — <span style="color:#555;">(Partial)</span>
@@ -769,13 +905,16 @@ body {
             <p><strong>SMILES:</strong> C1=CC(=C(C(=C1)Cl)Cl)C(=O)NN</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/3hy.cif"
-                        data-target="cif-viewer-13">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-13" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-13"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/3hy.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 4)
@@ -789,7 +928,9 @@ body {
                 <img src="images/3hy/plane_0_0_4.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div>
+                
+            </div>
+        
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 2)
             </button>
@@ -797,7 +938,12 @@ body {
             <div class="content">
                 <p><strong>d-spacing:</strong> 1.9529240830098331 Å</p>
                 <p><strong>distance:</strong> [0.295, -0.965]</p>
-        </div></div></div>
+        
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
     <div class="card">
         <button class="collapsible file-toggle">
             1,3,5-TCB — <span style="color:#555;">(All Available)</span>
@@ -807,13 +953,16 @@ body {
             <p><strong>SMILES:</strong> C1=C(C=C(C=C1Cl)Cl)Cl</p>
 
             <div class="cif-viewer-container">
-                <button class="view-cif-btn"
-                        data-cif="cif/1,3,5-TCB.cif"
-                        data-target="cif-viewer-14">
-                    View CIF structure
-                </button>
-                <div id="cif-viewer-14" class="cif-viewer"></div>
-            </div>
+    
+                <div id="cif-viewer-14"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/1,3,5-TCB.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
+        
+            </div>  <!-- end cif-viewer-container -->
     
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
@@ -827,7 +976,12 @@ body {
                 <img src="images/1,3,5-TCB/plane_0_0_2.jpg"
                      alt="Plane"
                      style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
-                </div></div></div>
+                
+            </div>
+        
+        </div>  <!-- end file content -->
+    </div>      <!-- end card -->
+    
 <script>
 // Collapsible logic
 var coll = document.getElementsByClassName("collapsible");
@@ -839,53 +993,62 @@ for (var i = 0; i < coll.length; i++) {
     });
 }
 
-var jsmolApplets = {};
+// Helper: wait for model, then add unit cell + replicate
+function enhanceViewerWhenReady(viewer, id) {
+    var tries = 0;
+    var maxTries = 20;      // ~20 * 300ms = 6 seconds max
+    var interval = setInterval(function() {
+        var model = null;
+        try {
+            model = viewer.getModel();
+        } catch (e) {
+            model = null;
+        }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var buttons = document.querySelectorAll(".view-cif-btn");
+        if (model) {
+            clearInterval(interval);
 
-    buttons.forEach(function(btn) {
-        btn.addEventListener("click", function() {
-
-            var cifUrl = this.getAttribute("data-cif");
-            var targetId = this.getAttribute("data-target");
-            var viewerDiv = document.getElementById(targetId);
-
-            if (viewerDiv.dataset.open === "true") {
-                viewerDiv.style.display = "none";
-                viewerDiv.dataset.open = "false";
-                this.textContent = "View CIF structure";
-                return;
+            try {
+                viewer.addUnitCell();
+            } catch (e) {
+                console.warn("addUnitCell failed for", id, e);
             }
 
-            viewerDiv.style.display = "block";
-            viewerDiv.dataset.open = "true";
-            this.textContent = "Hide CIF structure";
-
-            if (!viewerDiv.dataset.initialized) {
-                viewerDiv.dataset.initialized = "true";
-
-                var Info = {
-                    width: "100%",
-                    height: "100%",
-                    use: "HTML5",
-                    j2sPath: "jsmol/j2s",
-                    script: `
-                        load ${cifUrl};
-                        set forcePacked on;
-                        set unitcell on;
-                        select *;
-                        wireframe 0.15;
-                        spacefill 25%;
-                        zoom 110;
-                    `,
-                    disableInitialConsole: true
-                };
-
-                jsmolApplets[targetId] = Jmol.getApplet(targetId + "_applet", Info);
-                viewerDiv.innerHTML = Jmol.getAppletHtml(jsmolApplets[targetId]);
+            try {
+                viewer.replicateUnitCell(2, 2, 2);
+            } catch (e) {
+                console.warn("replicateUnitCell failed for", id, e);
             }
-        });
+
+            viewer.zoomTo();
+            viewer.render();
+        } else {
+            tries += 1;
+            if (tries >= maxTries) {
+                clearInterval(interval);
+                console.warn("No model loaded for viewer", id, "after", maxTries, "tries.");
+            }
+        }
+    }, 300);
+}
+
+// Once 3Dmol auto-viewers are initialized, schedule enhancement
+window.addEventListener("load", function() {
+    if (typeof $3Dmol === "undefined" || !$3Dmol.viewers) {
+        console.warn("3Dmol not ready or no viewers found.");
+        return;
+    }
+
+    document.querySelectorAll(".viewer_3Dmoljs").forEach(function(div) {
+        var id = div.id;
+        var viewer = $3Dmol.viewers && $3Dmol.viewers[id];
+        if (!viewer) {
+            console.warn("No 3Dmol viewer found for div id:", id);
+            return;
+        }
+
+        // Wait for model to exist, then add box + 2x2x2
+        enhanceViewerWhenReady(viewer, id);
     });
 });
 </script>

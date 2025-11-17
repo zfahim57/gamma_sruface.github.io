@@ -190,10 +190,10 @@ for idx, project in enumerate(data.get("files", [])):
     </div>      <!-- end card -->
     """
 
-# -------- JS: collapsible + unit cell + 2×2×2 --------
+# -------- JS: only collapsible logic --------
 html += """
 <script>
-// Collapsible logic
+// Collapsible logic only
 var coll = document.getElementsByClassName("collapsible");
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
@@ -202,66 +202,8 @@ for (var i = 0; i < coll.length; i++) {
         content.style.display = (content.style.display === "block") ? "none" : "block";
     });
 }
-
-// Helper: wait for model, then add unit cell + replicate
-function enhanceViewerWhenReady(viewer, id) {
-    var tries = 0;
-    var maxTries = 20;      // ~20 * 300ms = 6 seconds max
-    var interval = setInterval(function() {
-        var model = null;
-        try {
-            model = viewer.getModel();
-        } catch (e) {
-            model = null;
-        }
-
-        if (model) {
-            clearInterval(interval);
-
-            try {
-                viewer.addUnitCell();
-            } catch (e) {
-                console.warn("addUnitCell failed for", id, e);
-            }
-
-            try {
-                viewer.replicateUnitCell(2, 2, 2);
-            } catch (e) {
-                console.warn("replicateUnitCell failed for", id, e);
-            }
-
-            viewer.zoomTo();
-            viewer.render();
-        } else {
-            tries += 1;
-            if (tries >= maxTries) {
-                clearInterval(interval);
-                console.warn("No model loaded for viewer", id, "after", maxTries, "tries.");
-            }
-        }
-    }, 300);
-}
-
-// Once 3Dmol auto-viewers are initialized, schedule enhancement
-window.addEventListener("load", function() {
-    if (typeof $3Dmol === "undefined" || !$3Dmol.viewers) {
-        console.warn("3Dmol not ready or no viewers found.");
-        return;
-    }
-
-    document.querySelectorAll(".viewer_3Dmoljs").forEach(function(div) {
-        var id = div.id;
-        var viewer = $3Dmol.viewers && $3Dmol.viewers[id];
-        if (!viewer) {
-            console.warn("No 3Dmol viewer found for div id:", id);
-            return;
-        }
-
-        // Wait for model to exist, then add box + 2x2x2
-        enhanceViewerWhenReady(viewer, id);
-    });
-});
 </script>
+
 </body>
 </html>
 """

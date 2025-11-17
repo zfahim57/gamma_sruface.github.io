@@ -1,13 +1,12 @@
 import json
 import os
 
-# -------- Load JSON --------
+# Load JSON
 with open("data.json") as f:
     data = json.load(f)
 
 print("JSON keys:", data.keys())
 
-# -------- HTML header --------
 html = f"""
 <!DOCTYPE html>
 <html>
@@ -15,9 +14,8 @@ html = f"""
 <meta charset="UTF-8">
 <title>Gamma Surface Calculations</title>
 
-<!-- 3Dmol.js: no install needed -->
-<script src="https://3Dmol.org/build/3Dmol-min.js"></script>
-<script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>
+<!-- JSmol core (already present in your jsmol/ folder) -->
+<script type="text/javascript" src="jsmol/JSmol.min.js"></script>
 
 <style>
 body {{
@@ -66,8 +64,6 @@ body {{
 .cif-viewer-container {{
     margin-top: 10px;
 }}
-
-/* 3Dmol viewer must have fixed size and position:relative */
 .cif-viewer {{
     width: 100%;
     height: 400px;
@@ -75,8 +71,20 @@ body {{
     border-radius: 6px;
     border: 1px solid #ddd;
     margin-top: 5px;
+    display: none;
     background-color: #ffffff;
-    position: relative;
+}}
+.view-cif-btn {{
+    margin-top: 10px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    cursor: pointer;
+}}
+.view-cif-btn:hover {{
+    background-color: #ddd;
 }}
 </style>
 
@@ -89,75 +97,58 @@ body {{
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
-# -------- Loop over projects --------
-for idx, project in enumerate(data.get("files", [])):
+for idx, project in enumerate(data["files"]):
 
-    hkls = project.get("hkls", [])
-    total_hkls = len(hkls)
-
-    # compute status from images
+    # ---- compute status ----
     img_count = 0
-    for hkl in hkls:
+    total_hkls = len(project["hkls"])
+
+    for hkl in project["hkls"]:
         image = hkl.get("image")
         if image:
             img_fs = os.path.join(base_dir, image.lstrip("/"))
             if os.path.exists(img_fs):
                 img_count += 1
 
-    if total_hkls > 0 and img_count == total_hkls:
+    if img_count == total_hkls:
         status = "All Available"
     elif img_count > 0:
         status = "Partial"
     else:
         status = "Bad"
 
-    # CIF path in ./cif/
-    filename = project.get("filename", f"file_{idx}")
-    cif_name = filename if filename.lower().endswith(".cif") else filename + ".cif"
+    # ---- CIF path in ./cif/ ----
+    cif_name = project["filename"]
+    if not cif_name.lower().endswith(".cif"):
+        cif_name = cif_name + ".cif"
     cif_web_path = f"cif/{cif_name}"
-    cif_fs_path = os.path.join(base_dir, cif_web_path)
 
     viewer_id = f"cif-viewer-{idx}"
 
     html += f"""
     <div class="card">
         <button class="collapsible file-toggle">
-            {filename} — <span style="color:#555;">({status})</span>
+            {project['filename']} — <span style="color:#555;">({status})</span>
         </button>
 
         <div class="content">
-            <p><strong>SMILES:</strong> {project.get('smiles', 'N/A')}</p>
+            <p><strong>SMILES:</strong> {project['smiles']}</p>
 
             <div class="cif-viewer-container">
+                <button class="view-cif-btn"
+                        data-cif="{cif_web_path}"
+                        data-target="{viewer_id}">
+                    View CIF structure
+                </button>
+                <div id="{viewer_id}" class="cif-viewer"></div>
+            </div>
     """
 
-    # ---- Only add 3Dmol viewer if CIF actually exists ----
-    if os.path.exists(cif_fs_path):
-        html += f"""
-                <div id="{viewer_id}"
-                     class="viewer_3Dmoljs cif-viewer"
-                     data-href="{cif_web_path}"
-                     data-type="cif"
-                     data-backgroundcolor="0xffffff"
-                     data-style="stick">
-                </div>
-        """
-    else:
-        html += f"""
-                <p style="color:#a00; font-style:italic;">
-                    CIF file not found: {cif_web_path}
-                </p>
-        """
-
-    html += """
-            </div>  <!-- end cif-viewer-container -->
-    """
-
-    # HKL sections
-    for hkl in hkls:
-        plane = hkl.get("plane", [0, 0, 0])
-        d = hkl.get("d_spacing", "N/A")
-        dist = hkl.get("distance", "N/A")
+    # --- HKL sections ---
+    for hkl in project["hkls"]:
+        plane = hkl["plane"]
+        d = hkl["d_spacing"]
+        dist = hkl["distance"]
         image = hkl.get("image")
 
         html += f"""
@@ -190,7 +181,7 @@ for idx, project in enumerate(data.get("files", [])):
     </div>      <!-- end card -->
     """
 
-# -------- JS: collapsible + unit cell + 2×2×2 --------
+# ---- JS: collapsibles + JSmol viewers ----
 html += """
 <script>
 // Collapsible logic
@@ -203,62 +194,63 @@ for (var i = 0; i < coll.length; i++) {
     });
 }
 
-// Helper: wait for model, then add unit cell + replicate
-function enhanceViewerWhenReady(viewer, id) {
-    var tries = 0;
-    var maxTries = 20;      // ~20 * 300ms = 6 seconds max
-    var interval = setInterval(function() {
-        var model = null;
-        try {
-            model = viewer.getModel();
-        } catch (e) {
-            model = null;
-        }
+// Tell JSmol we will inject applets dynamically
+Jmol.setDocument(0);
 
-        if (model) {
-            clearInterval(interval);
+var jsmolApplets = {};
 
-            try {
-                viewer.addUnitCell();
-            } catch (e) {
-                console.warn("addUnitCell failed for", id, e);
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".view-cif-btn");
+
+    buttons.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            var cifUrl   = this.getAttribute("data-cif");
+            var targetId = this.getAttribute("data-target");
+            var viewerDiv = document.getElementById(targetId);
+
+            // Toggle open/close
+            if (viewerDiv.dataset.open === "true") {
+                viewerDiv.style.display = "none";
+                viewerDiv.dataset.open = "false";
+                this.textContent = "View CIF structure";
+                return;
             }
 
-            try {
-                viewer.replicateUnitCell(2, 2, 2);
-            } catch (e) {
-                console.warn("replicateUnitCell failed for", id, e);
+            viewerDiv.style.display = "block";
+            viewerDiv.dataset.open = "true";
+            this.textContent = "Hide CIF structure";
+
+            // Initialize JSmol applet only once
+            if (!viewerDiv.dataset.initialized) {
+                viewerDiv.dataset.initialized = "true";
+
+                var appletName = targetId + "_applet";
+
+                // Here we follow JSmol's own pattern: put the load
+                // script directly in Info.script, and use getAppletHtml().
+                var Info = {
+                    width: "100%",
+                    height: "100%",
+                    use: "HTML5",
+                    j2sPath: "jsmol/j2s",
+                    disableInitialConsole: true,
+                    script:
+                        "load " + cifUrl + ";" +
+                        "set forcePacked true;" +
+                        "set unitcell on;" +
+                        "select *;" +
+                        "wireframe 0.15;" +
+                        "spacefill 25%;" +
+                        "zoom 110;"
+                };
+
+                var applet = Jmol.getApplet(appletName, Info);
+                jsmolApplets[targetId] = applet;
+
+                // Insert the applet HTML into the div
+                viewerDiv.innerHTML = Jmol.getAppletHtml(applet);
             }
-
-            viewer.zoomTo();
-            viewer.render();
-        } else {
-            tries += 1;
-            if (tries >= maxTries) {
-                clearInterval(interval);
-                console.warn("No model loaded for viewer", id, "after", maxTries, "tries.");
-            }
-        }
-    }, 300);
-}
-
-// Once 3Dmol auto-viewers are initialized, schedule enhancement
-window.addEventListener("load", function() {
-    if (typeof $3Dmol === "undefined" || !$3Dmol.viewers) {
-        console.warn("3Dmol not ready or no viewers found.");
-        return;
-    }
-
-    document.querySelectorAll(".viewer_3Dmoljs").forEach(function(div) {
-        var id = div.id;
-        var viewer = $3Dmol.viewers && $3Dmol.viewers[id];
-        if (!viewer) {
-            console.warn("No 3Dmol viewer found for div id:", id);
-            return;
-        }
-
-        // Wait for model to exist, then add box + 2x2x2
-        enhanceViewerWhenReady(viewer, id);
+        });
     });
 });
 </script>
@@ -266,7 +258,6 @@ window.addEventListener("load", function() {
 </html>
 """
 
-# -------- Write HTML --------
 with open("index.html", "w") as f:
     f.write(html)
 
