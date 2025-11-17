@@ -67,23 +67,6 @@ body {{
     margin-top: 10px;
 }}
 
-.gallery {{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 100px;
-    margin-top: 10px;
-}}
-
-.gallery img {{
-    width: 100%;
-    height: 400px;          /* Controls size → increase if needed */
-    object-fit: contain;    /* Prevent cropping */
-    background: #fafafa;    /* Fill empty space when aspect ratio differs */
-    padding: 10px;           /* Adds clean spacing */
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}}
-
 /* 3Dmol viewer must have fixed size and position:relative */
 .cif-viewer {{
     width: 100%;
@@ -169,23 +152,6 @@ for idx, project in enumerate(data.get("files", [])):
     html += """
             </div>  <!-- end cif-viewer-container -->
     """
-    # All images gallery
-    # Collect plane images for gallery
-    plane_images = []
-    for hkl in hkls:
-        image = hkl.get("image")
-        if image:
-            img_fs = os.path.join(base_dir, image.lstrip("/"))
-            if os.path.exists(img_fs):
-                plane_images.append(image.lstrip("/"))
-
-    # Add gallery if at least one image
-    if plane_images:
-        html += """<div><strong>Plane Images:</strong></div>"""
-        html += """<div class="gallery">"""
-        for img in plane_images:
-            html += f'<img src="{img}" alt="plane thumbnail">'
-        html += "</div>"
 
     # HKL sections
     for hkl in hkls:

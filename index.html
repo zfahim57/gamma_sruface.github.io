@@ -57,6 +57,23 @@ body {
     margin-top: 10px;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 100px;
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 400px;          /* Controls size → increase if needed */
+    object-fit: contain;    /* Prevent cropping */
+    background: #fafafa;    /* Fill empty space when aspect ratio differs */
+    padding: 10px;           /* Adds clean spacing */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
 /* 3Dmol viewer must have fixed size and position:relative */
 .cif-viewer {
     width: 100%;
@@ -95,7 +112,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/3-4-dichloro-phenol/plane_0_4_0.jpg" alt="plane thumbnail"><img src="images/3-4-dichloro-phenol/plane_4_0_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 4, 0)
             </button>
@@ -107,7 +124,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/3-4-dichloro-phenol/plane_0_4_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -122,7 +139,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/3-4-dichloro-phenol/plane_4_0_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -148,7 +165,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/2-nitrobenzaldehyde/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/2-nitrobenzaldehyde/plane_1_0_1.jpg" alt="plane thumbnail"><img src="images/2-nitrobenzaldehyde/plane_0_0_2.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, -1)
             </button>
@@ -160,7 +177,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/2-nitrobenzaldehyde/plane_1_0_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -175,7 +192,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/2-nitrobenzaldehyde/plane_1_0_1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -190,7 +207,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/2-nitrobenzaldehyde/plane_0_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -216,7 +233,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/4CFNCS/plane_0_2_0.jpg" alt="plane thumbnail"><img src="images/4CFNCS/plane_2_-1_0.jpg" alt="plane thumbnail"><img src="images/4CFNCS/plane_2_1_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 2, 0)
             </button>
@@ -228,7 +245,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4CFNCS/plane_0_2_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -243,7 +260,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4CFNCS/plane_2_-1_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -258,7 +275,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4CFNCS/plane_2_1_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -284,7 +301,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/9,10-DCA/plane_1_-1_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_2_-2_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_1_-1_0.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_0_1_0.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_2_-3_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_1_-2_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (1, -1, -1)
             </button>
@@ -296,7 +313,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_1_-1_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -311,7 +328,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_2_-2_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -326,7 +343,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_1_-1_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -341,7 +358,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_0_1_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -356,7 +373,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_1_0_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -371,7 +388,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_2_-3_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -386,7 +403,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/9,10-DCA/plane_1_-2_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -403,12 +420,16 @@ body {
 
             <div class="cif-viewer-container">
     
-                <p style="color:#a00; font-style:italic;">
-                    CIF file not found: cif/AQAQOZ-DMP.cif
-                </p>
+                <div id="cif-viewer-4"
+                     class="viewer_3Dmoljs cif-viewer"
+                     data-href="cif/AQAQOZ-DMP.cif"
+                     data-type="cif"
+                     data-backgroundcolor="0xffffff"
+                     data-style="stick">
+                </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/AQAQOZ-DMP/plane_2_0_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 0)
             </button>
@@ -420,7 +441,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/AQAQOZ-DMP/plane_2_0_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -446,7 +467,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,4-DBB/plane_0_0_2.jpg" alt="plane thumbnail"><img src="images/1,4-DBB/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/1,4-DBB/plane_1_0_1.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -458,7 +479,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,4-DBB/plane_0_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -473,7 +494,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,4-DBB/plane_1_0_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -488,7 +509,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,4-DBB/plane_1_0_1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -514,7 +535,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/4-CBN/plane_0_0_2.jpg" alt="plane thumbnail"><img src="images/4-CBN/plane_1_0_2.jpg" alt="plane thumbnail"><img src="images/4-CBN/plane_1_0_0.jpg" alt="plane thumbnail"><img src="images/4-CBN/plane_2_0_2.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -526,7 +547,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4-CBN/plane_0_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -541,7 +562,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4-CBN/plane_1_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -556,7 +577,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4-CBN/plane_1_0_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -571,7 +592,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/4-CBN/plane_2_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -597,7 +618,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg" alt="plane thumbnail"><img src="images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg" alt="plane thumbnail"><img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg" alt="plane thumbnail"><img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -609,7 +630,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -624,7 +645,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -639,7 +660,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -654,7 +675,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -680,7 +701,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 4, 0)
             </button>
@@ -692,7 +713,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -718,7 +739,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,3,5-TBB/plane_0_0_2.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -730,7 +751,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,3,5-TBB/plane_0_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -756,7 +777,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg" alt="plane thumbnail"><img src="images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 2)
             </button>
@@ -768,7 +789,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -783,7 +804,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -798,7 +819,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -824,7 +845,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/345-trimethoxybenzaldehyde/plane_4_0_0.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (4, 0, 0)
             </button>
@@ -836,7 +857,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/345-trimethoxybenzaldehyde/plane_4_0_0.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -862,7 +883,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,3-DNB/plane_0_1_-1.jpg" alt="plane thumbnail"><img src="images/1,3-DNB/plane_0_1_1.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, -1)
             </button>
@@ -874,7 +895,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,3-DNB/plane_0_1_-1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -889,7 +910,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,3-DNB/plane_0_1_1.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -898,7 +919,7 @@ body {
     
     <div class="card">
         <button class="collapsible file-toggle">
-            3hy — <span style="color:#555;">(Partial)</span>
+            3hy — <span style="color:#555;">(All Available)</span>
         </button>
 
         <div class="content">
@@ -915,7 +936,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/3hy/plane_0_0_4.jpg" alt="plane thumbnail"><img src="images/3hy/plane_2_0_2.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 4)
             </button>
@@ -927,7 +948,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/3hy/plane_0_0_4.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
@@ -939,6 +960,11 @@ body {
                 <p><strong>d-spacing:</strong> 1.9529240830098331 Å</p>
                 <p><strong>distance:</strong> [0.295, -0.965]</p>
         
+                <p><strong>Image:</strong></p>
+                <img src="images/3hy/plane_2_0_2.jpg"
+                     alt="Plane"
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
+                
             </div>
         
         </div>  <!-- end file content -->
@@ -963,7 +989,7 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    
+    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,3,5-TCB/plane_0_0_2.jpg" alt="plane thumbnail"></div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -975,7 +1001,7 @@ body {
                 <p><strong>Image:</strong></p>
                 <img src="images/1,3,5-TCB/plane_0_0_2.jpg"
                      alt="Plane"
-                     style="max-width: 100%; border-radius: 6px; margin-top: 5px;">
+                     style="max-width: 50%; border-radius: 6px; margin-top: 5px;">
                 
             </div>
         
