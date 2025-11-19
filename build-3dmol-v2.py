@@ -130,7 +130,7 @@ for idx, project in enumerate(data.get("files", [])):
 
     # CIF path in ./cif/
     filename = project.get("filename", f"file_{idx}")
-    cif_name = filename if filename.lower().endswith(".xyz") else filename + ".xyz"
+    cif_name = filename if filename.lower().endswith(".cif") else filename + ".cif"
     cif_web_path = f"cif/{cif_name}"
     cif_fs_path = os.path.join(base_dir, cif_web_path)
 
@@ -154,7 +154,7 @@ for idx, project in enumerate(data.get("files", [])):
                 <div id="{viewer_id}"
                      class="viewer_3Dmoljs cif-viewer"
                      data-href="{cif_web_path}"
-                     data-type="xyz"
+                     data-type="cif"
                      data-backgroundcolor="0xffffff"
                      data-style="stick">
                 </div>
