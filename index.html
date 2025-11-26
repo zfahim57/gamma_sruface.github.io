@@ -64,12 +64,25 @@ body {
     margin-top: 10px;
 }
 
+/* NEW: wrapper per image + d-spacing label */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item .d-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
 .gallery img {
     width: 100%;
     height: 400px;          /* Controls size → increase if needed */
     object-fit: contain;    /* Prevent cropping */
     background: #fafafa;    /* Fill empty space when aspect ratio differs */
-    padding: 10px;           /* Adds clean spacing */
+    padding: 10px;          /* Adds clean spacing */
     border-radius: 6px;
     border: 1px solid #ccc;
 }
@@ -112,7 +125,21 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/3-4-dichloro-phenol/plane_0_4_0.jpg" alt="plane thumbnail"><img src="images/3-4-dichloro-phenol/plane_4_0_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 4, 0): distance = [1.766, 1.15] Å
+                    </div>
+                    <img src="images/3-4-dichloro-phenol/plane_0_4_0.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (4, 0, 0): distance = [1.766, 1.15] Å
+                    </div>
+                    <img src="images/3-4-dichloro-phenol/plane_4_0_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 4, 0)
             </button>
@@ -165,7 +192,28 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/2-nitrobenzaldehyde/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/2-nitrobenzaldehyde/plane_1_0_1.jpg" alt="plane thumbnail"><img src="images/2-nitrobenzaldehyde/plane_0_0_2.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, -1): distance = [0.62] Å
+                    </div>
+                    <img src="images/2-nitrobenzaldehyde/plane_1_0_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, 1): distance = [0.411] Å
+                    </div>
+                    <img src="images/2-nitrobenzaldehyde/plane_1_0_1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 2): distance = [0.15, -0.334] Å
+                    </div>
+                    <img src="images/2-nitrobenzaldehyde/plane_0_0_2.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (1, 0, -1)
             </button>
@@ -233,7 +281,28 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/4CFNCS/plane_0_2_0.jpg" alt="plane thumbnail"><img src="images/4CFNCS/plane_2_-1_0.jpg" alt="plane thumbnail"><img src="images/4CFNCS/plane_2_1_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 2, 0): distance = [1.215] Å
+                    </div>
+                    <img src="images/4CFNCS/plane_0_2_0.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, -1, 0): distance = [0.053] Å
+                    </div>
+                    <img src="images/4CFNCS/plane_2_-1_0.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, 1, 0): distance = [0.053] Å
+                    </div>
+                    <img src="images/4CFNCS/plane_2_1_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 2, 0)
             </button>
@@ -301,7 +370,56 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/9,10-DCA/plane_1_-1_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_2_-2_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_1_-1_0.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_0_1_0.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_2_-3_-1.jpg" alt="plane thumbnail"><img src="images/9,10-DCA/plane_1_-2_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, -1, -1): distance = [2.21] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_1_-1_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, -2, -1): distance = [1.161] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_2_-2_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, -1, 0): distance = [1.14] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_1_-1_0.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 1, 0): distance = [0.89] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_0_1_0.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, -1): distance = [0.71] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_1_0_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, -3, -1): distance = [0.515] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_2_-3_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, -2, 0): distance = [0.358] Å
+                    </div>
+                    <img src="images/9,10-DCA/plane_1_-2_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (1, -1, -1)
             </button>
@@ -429,7 +547,14 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/AQAQOZ-DMP/plane_2_0_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, 0, 0): distance = [1.578, 0.906] Å
+                    </div>
+                    <img src="images/AQAQOZ-DMP/plane_2_0_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 0)
             </button>
@@ -467,7 +592,28 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,4-DBB/plane_0_0_2.jpg" alt="plane thumbnail"><img src="images/1,4-DBB/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/1,4-DBB/plane_1_0_1.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 2): distance = [2.314] Å
+                    </div>
+                    <img src="images/1,4-DBB/plane_0_0_2.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, -1): distance = [1.333] Å
+                    </div>
+                    <img src="images/1,4-DBB/plane_1_0_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, 1): distance = [1.128] Å
+                    </div>
+                    <img src="images/1,4-DBB/plane_1_0_1.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -535,7 +681,35 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/4-CBN/plane_0_0_2.jpg" alt="plane thumbnail"><img src="images/4-CBN/plane_1_0_2.jpg" alt="plane thumbnail"><img src="images/4-CBN/plane_1_0_0.jpg" alt="plane thumbnail"><img src="images/4-CBN/plane_2_0_2.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 2): distance = [1.81] Å
+                    </div>
+                    <img src="images/4-CBN/plane_0_0_2.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, 2): distance = [1.643] Å
+                    </div>
+                    <img src="images/4-CBN/plane_1_0_2.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, 0): distance = [0.843] Å
+                    </div>
+                    <img src="images/4-CBN/plane_1_0_0.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, 0, 2): distance = [0.144] Å
+                    </div>
+                    <img src="images/4-CBN/plane_2_0_2.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -618,7 +792,35 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg" alt="plane thumbnail"><img src="images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg" alt="plane thumbnail"><img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg" alt="plane thumbnail"><img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 2): distance = [2.19, -0.238] Å
+                    </div>
+                    <img src="images/6-chloro-2-4-dinitroaniline/plane_0_0_2.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, 1): distance = [0.501] Å
+                    </div>
+                    <img src="images/6-chloro-2-4-dinitroaniline/plane_1_0_1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 1, -1): distance = [0.071] Å
+                    </div>
+                    <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 1, 1): distance = [0.071] Å
+                    </div>
+                    <img src="images/6-chloro-2-4-dinitroaniline/plane_0_1_1.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -701,7 +903,14 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 4, 0): distance = [0.299, -0.66] Å
+                    </div>
+                    <img src="images/2-methylthio-nicotinic-aicd/plane_0_4_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 4, 0)
             </button>
@@ -739,7 +948,14 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,3,5-TBB/plane_0_0_2.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 2): distance = [1.451] Å
+                    </div>
+                    <img src="images/1,3,5-TBB/plane_0_0_2.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>
@@ -777,7 +993,28 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg" alt="plane thumbnail"><img src="images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg" alt="plane thumbnail"><img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, 0, 2): distance = [1.873, 0.546] Å
+                    </div>
+                    <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_2.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (1, 0, -1): distance = [1.071] Å
+                    </div>
+                    <img src="images/135-trifluoro-246-triiodobenzene/plane_1_0_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, 0, 0): distance = [0.664] Å
+                    </div>
+                    <img src="images/135-trifluoro-246-triiodobenzene/plane_2_0_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (2, 0, 2)
             </button>
@@ -845,7 +1082,14 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/345-trimethoxybenzaldehyde/plane_4_0_0.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (4, 0, 0): distance = [0.696, 0.156, 0.102] Å
+                    </div>
+                    <img src="images/345-trimethoxybenzaldehyde/plane_4_0_0.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (4, 0, 0)
             </button>
@@ -883,7 +1127,21 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,3-DNB/plane_0_1_-1.jpg" alt="plane thumbnail"><img src="images/1,3-DNB/plane_0_1_1.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 1, -1): distance = [0.454] Å
+                    </div>
+                    <img src="images/1,3-DNB/plane_0_1_-1.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 1, 1): distance = [0.454] Å
+                    </div>
+                    <img src="images/1,3-DNB/plane_0_1_1.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 1, -1)
             </button>
@@ -936,7 +1194,21 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/3hy/plane_0_0_4.jpg" alt="plane thumbnail"><img src="images/3hy/plane_2_0_2.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 4): distance = [1.47, -1.212] Å
+                    </div>
+                    <img src="images/3hy/plane_0_0_4.jpg" alt="plane thumbnail">
+                </div>
+            
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (2, 0, 2): distance = [0.295, -0.965] Å
+                    </div>
+                    <img src="images/3hy/plane_2_0_2.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 4)
             </button>
@@ -989,7 +1261,14 @@ body {
                 </div>
         
             </div>  <!-- end cif-viewer-container -->
-    <div><strong>Plane Images:</strong></div><div class="gallery"><img src="images/1,3,5-TCB/plane_0_0_2.jpg" alt="plane thumbnail"></div>
+    <div><strong>Plane Images:</strong></div><div class="gallery">
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane (0, 0, 2): distance = [1.254] Å
+                    </div>
+                    <img src="images/1,3,5-TCB/plane_0_0_2.jpg" alt="plane thumbnail">
+                </div>
+            </div>
             <button class="collapsible plane-toggle">
                 Plane: (0, 0, 2)
             </button>

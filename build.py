@@ -74,12 +74,25 @@ body {{
     margin-top: 10px;
 }}
 
+/* NEW: wrapper per image + d-spacing label */
+.gallery-item {{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}}
+
+.gallery-item .d-label {{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}}
+
 .gallery img {{
     width: 100%;
     height: 400px;          /* Controls size → increase if needed */
     object-fit: contain;    /* Prevent cropping */
     background: #fafafa;    /* Fill empty space when aspect ratio differs */
-    padding: 10px;           /* Adds clean spacing */
+    padding: 10px;          /* Adds clean spacing */
     border-radius: 6px;
     border: 1px solid #ccc;
 }}
@@ -169,25 +182,40 @@ for idx, project in enumerate(data.get("files", [])):
     html += """
             </div>  <!-- end cif-viewer-container -->
     """
-    # All images gallery
-    # Collect plane images for gallery
+
+    # ---------- All images gallery (SUMMARY) ----------
+    # Collect plane images for gallery, WITH d-spacing
     plane_images = []
     for hkl in hkls:
         image = hkl.get("image")
         if image:
             img_fs = os.path.join(base_dir, image.lstrip("/"))
             if os.path.exists(img_fs):
-                plane_images.append(image.lstrip("/"))
+                plane_images.append({
+                    "src": image.lstrip("/"),
+                    "d": hkl.get("distance", "N/A"),
+                    "plane": hkl.get("plane", [0, 0, 0])
+                })
 
     # Add gallery if at least one image
     if plane_images:
         html += """<div><strong>Plane Images:</strong></div>"""
         html += """<div class="gallery">"""
-        for img in plane_images:
-            html += f'<img src="{img}" alt="plane thumbnail">'
+        for entry in plane_images:
+            src = entry["src"]
+            d = entry["d"]
+            plane = entry["plane"]
+            html += f'''
+                <div class="gallery-item">
+                    <div class="d-label">
+                        Plane ({plane[0]}, {plane[1]}, {plane[2]}): distance = {d} Å
+                    </div>
+                    <img src="{src}" alt="plane thumbnail">
+                </div>
+            '''
         html += "</div>"
 
-    # HKL sections
+    # ---------- HKL sections (detailed, as before) ----------
     for hkl in hkls:
         plane = hkl.get("plane", [0, 0, 0])
         d = hkl.get("d_spacing", "N/A")
