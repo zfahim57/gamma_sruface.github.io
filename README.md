@@ -1,6 +1,1 @@
-# gamma_sruface.github.io
-# gamma_sruface.github.io
-# gamma_sruface.github.io
-# gamma_sruface.github.io
-# gamma_sruface.github.io
-# gamma_sruface.github.io
+A repo to host gamma surface calculation
